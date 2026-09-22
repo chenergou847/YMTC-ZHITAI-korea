@@ -1,0 +1,990 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>致态入韩利弊研判</title>
+<meta name="description" content="长江存储致态消费级 SSD 出海韩国的政策与经营利弊评估，报告截止 2026-09-21。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@600;700&display=swap">
+<style>
+:root{
+  --ground:#f1f3f5; --surface:#fbfcfd; --surface-2:#e8ecf0;
+  --ink:#111923; --ink-2:#465262; --ink-3:#5f6b7a;
+  --rule:#d5dbe2; --rule-strong:#b9c1cb;
+  --accent:#0e6770; --accent-soft:#dcecee;
+  --pos:#15703f; --pos-soft:#e1f1e7;
+  --neg:#b1261d; --neg-soft:#f8e3e1;
+  --warn:#8a5700; --warn-soft:#f6ecd6;
+  --neu:#4f5a68; --neu-soft:#e7eaee;
+  --series-1:#2a78d6; --series-2:#eb6834; --grid:#dfe4ea;
+  --shadow:0 1px 2px rgba(17,25,35,.06),0 4px 16px rgba(17,25,35,.05);
+  --serif:"Noto Serif SC","Songti SC","STSong",serif;
+  --sans:"Noto Sans SC","PingFang SC","Microsoft YaHei",system-ui,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,"SFMono-Regular",Menlo,monospace;
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --ground:#0e1319; --surface:#151c24; --surface-2:#1d2630;
+    --ink:#e7ecf1; --ink-2:#aab4bf; --ink-3:#8f9aa7;
+    --rule:#2b3542; --rule-strong:#3c4856;
+    --accent:#5cc0c7; --accent-soft:#16343a;
+    --pos:#5ccb94; --pos-soft:#15301f;
+    --neg:#ff8e84; --neg-soft:#3a1a18;
+    --warn:#e3b55a; --warn-soft:#342a14;
+    --neu:#b3bcc7; --neu-soft:#232c36;
+    --series-1:#3987e5; --series-2:#d95926; --grid:#26303b;
+    --shadow:0 1px 2px rgba(0,0,0,.3),0 6px 20px rgba(0,0,0,.25);
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#0e1319; --surface:#151c24; --surface-2:#1d2630;
+  --ink:#e7ecf1; --ink-2:#aab4bf; --ink-3:#8f9aa7;
+  --rule:#2b3542; --rule-strong:#3c4856;
+  --accent:#5cc0c7; --accent-soft:#16343a;
+  --pos:#5ccb94; --pos-soft:#15301f;
+  --neg:#ff8e84; --neg-soft:#3a1a18;
+  --warn:#e3b55a; --warn-soft:#342a14;
+  --neu:#b3bcc7; --neu-soft:#232c36;
+  --series-1:#3987e5; --series-2:#d95926; --grid:#26303b;
+  --shadow:0 1px 2px rgba(0,0,0,.3),0 6px 20px rgba(0,0,0,.25);
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}*{transition:none!important}}
+body{background:var(--ground);color:var(--ink);font-family:var(--sans);font-size:15.5px;line-height:1.75;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+a{color:var(--accent);text-underline-offset:3px}
+a:focus-visible,[tabindex]:focus-visible,summary:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1240px;margin:0 auto;padding-inline:clamp(16px,4vw,40px);padding-block:28px 96px}
+
+/* masthead */
+.strip{display:flex;flex-wrap:wrap;gap:8px 20px;align-items:center;font-family:var(--mono);font-size:12px;letter-spacing:.06em;color:var(--ink-3);text-transform:uppercase;padding-bottom:14px;border-bottom:1px solid var(--rule)}
+.strip b{color:var(--ink-2);font-weight:500}
+.mast{display:grid;grid-template-columns:minmax(0,1fr);gap:28px;padding-block:36px 32px;border-bottom:1px solid var(--rule)}
+@media(min-width:980px){.mast{grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);align-items:end}}
+.eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.08em;color:var(--accent);text-transform:uppercase;margin:0 0 12px}
+h1{font-family:var(--serif);font-weight:700;font-size:clamp(28px,4.4vw,46px);line-height:1.22;letter-spacing:-.01em;margin:0 0 16px;text-wrap:balance}
+.lede{font-size:17px;color:var(--ink-2);max-width:60ch;margin:0}
+.meta-grid{display:grid;grid-template-columns:auto 1fr;gap:6px 16px;font-size:13.5px;margin:0}
+.meta-grid dt{font-family:var(--mono);font-size:12px;color:var(--ink-3);letter-spacing:.04em;padding-top:2px}
+.meta-grid dd{margin:0;color:var(--ink-2)}
+
+/* verdict */
+.verdict{background:var(--surface);border:1px solid var(--rule);border-radius:14px;box-shadow:var(--shadow);padding:22px clamp(18px,3vw,28px);margin-top:28px;display:grid;gap:18px}
+.v-top{display:flex;flex-wrap:wrap;gap:12px 28px;align-items:baseline}
+.v-label{font-family:var(--mono);font-size:12px;letter-spacing:.08em;color:var(--ink-3);text-transform:uppercase}
+.v-main{font-family:var(--serif);font-size:clamp(26px,3.4vw,34px);font-weight:700;color:var(--pos);line-height:1.2}
+.v-kpis{display:flex;flex-wrap:wrap;gap:8px 22px;font-size:14px;color:var(--ink-2)}
+.v-kpis b{color:var(--ink);font-weight:700}
+.scale{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:4px}
+.scale .cell{border:1px solid var(--rule);border-radius:8px;padding:10px 10px 8px;font-size:13px;color:var(--ink-3);background:var(--ground);position:relative;min-height:62px}
+.scale .cell .nm{display:block;font-weight:700;color:var(--ink-2);font-size:13.5px}
+.scale .cell.on{background:var(--pos-soft);border-color:var(--pos);color:var(--ink)}
+.scale .cell.on .nm{color:var(--pos)}
+.scale .cell.alt{border:1.5px dashed var(--neg);background:var(--neg-soft)}
+.scale .cell.alt .nm{color:var(--neg)}
+.scale .note{display:block;font-size:12px;line-height:1.5;margin-top:4px}
+@media(max-width:560px){.scale{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.v-why{margin:0;max-width:78ch;color:var(--ink-2)}
+
+/* layout */
+.layout{display:grid;grid-template-columns:minmax(0,1fr);gap:40px;margin-top:40px}
+main{min-width:0}
+@media(min-width:1100px){.layout{grid-template-columns:210px minmax(0,1fr)}}
+.toc{display:none}
+@media(min-width:1100px){.toc{display:block;position:sticky;top:calc(env(safe-area-inset-top,0px) + 24px);align-self:start;max-height:calc(100vh - 48px);overflow:auto}}
+.toc p{font-family:var(--mono);font-size:11.5px;letter-spacing:.08em;color:var(--ink-3);text-transform:uppercase;margin:0 0 10px}
+.toc ol{list-style:none;margin:0;padding:0;display:grid;gap:2px;counter-reset:t}
+.toc a{display:grid;grid-template-columns:22px 1fr;gap:6px;text-decoration:none;color:var(--ink-2);font-size:13.5px;line-height:1.45;padding:5px 8px;border-radius:6px}
+.toc a:hover{background:var(--surface-2);color:var(--ink)}
+.toc a span{font-family:var(--mono);font-size:11.5px;color:var(--ink-3);padding-top:1px}
+.toc a.sub{padding-left:36px;font-size:12.5px;color:var(--ink-3);grid-template-columns:1fr}
+
+/* sections & type */
+section.sec{padding-block:8px 44px;border-bottom:1px solid var(--rule);scroll-margin-top:24px}
+section.sec + section.sec{padding-top:40px}
+.sec-no{font-family:var(--mono);font-size:12px;letter-spacing:.08em;color:var(--accent);margin:0 0 6px}
+h2{font-family:var(--serif);font-weight:700;font-size:clamp(22px,2.6vw,28px);line-height:1.3;margin:0 0 20px;text-wrap:balance}
+h3{font-family:var(--serif);font-weight:600;font-size:19px;line-height:1.4;margin:32px 0 12px;text-wrap:balance;scroll-margin-top:24px}
+h4{font-size:15px;font-weight:700;margin:22px 0 8px;color:var(--ink)}
+p,li{max-width:72ch}
+p{margin:0 0 14px}
+ul,ol{margin:0 0 14px;padding-left:1.3em}
+li{margin:4px 0}
+li::marker{color:var(--ink-3)}
+strong{font-weight:700}
+.muted{color:var(--ink-3)}
+.small{font-size:13.5px}
+.callout{background:var(--surface);border:1px solid var(--rule);border-radius:12px;padding:16px 20px;margin:16px 0}
+.callout p:last-child,.callout ul:last-child{margin-bottom:0}
+
+/* inline markers */
+.tag{display:inline-block;font-family:var(--mono);font-size:10.5px;font-weight:500;letter-spacing:.02em;line-height:1;padding:3px 5px 2px;border-radius:4px;vertical-align:1px;margin-right:3px;border:1px solid var(--rule-strong);color:var(--ink-2);background:var(--surface);white-space:nowrap}
+.tag.a{border-color:var(--accent);color:var(--accent)}
+.tag.q{border-color:var(--warn);color:var(--warn);background:var(--warn-soft)}
+.tag.s{border-style:dashed;color:var(--ink-3)}
+.tag.u{border-color:var(--neu);color:var(--neu)}
+.cite{font-family:var(--mono);font-size:11px;text-decoration:none;color:var(--accent);background:var(--accent-soft);padding:1px 4px;border-radius:4px;margin-left:2px;white-space:nowrap;vertical-align:1px}
+.cite:hover{text-decoration:underline}
+.dir,.urg,.pri{display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:700;line-height:1.3;padding:2px 7px;border-radius:999px;white-space:nowrap}
+.dir{font-family:var(--mono);font-weight:500}
+.dir.pos{background:var(--pos-soft);color:var(--pos)}
+.dir.neg{background:var(--neg-soft);color:var(--neg)}
+.dir.mix{background:var(--neu-soft);color:var(--neu)}
+.urg.now{background:var(--neg-soft);color:var(--neg)}
+.urg.prep{background:var(--warn-soft);color:var(--warn)}
+.urg.watch{background:var(--neu-soft);color:var(--neu)}
+.urg::before{content:"";width:6px;height:6px;border-radius:50%;background:currentColor}
+.pri{font-family:var(--mono);font-weight:500;border:1px solid var(--rule-strong);color:var(--ink)}
+
+/* tables */
+.tbl{overflow-x:auto;border:1px solid var(--rule);border-radius:12px;background:var(--surface);margin:14px 0 18px;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;font-size:13.5px;line-height:1.6}
+th,td{text-align:left;vertical-align:top;padding:10px 12px;border-bottom:1px solid var(--rule)}
+tr:last-child td{border-bottom:0}
+thead th{font-weight:700;font-size:12.5px;color:var(--ink-2);background:var(--surface-2);position:sticky;top:0;white-space:nowrap}
+td.nw,th.nw{white-space:nowrap}
+.tbl.wide table{min-width:980px}
+.tbl.xwide table{min-width:1280px}
+.tbl.mid table{min-width:760px}
+td .dir,td .urg,td .pri{margin:1px 0}
+td b{font-weight:700}
+.num{font-family:var(--mono);font-variant-numeric:tabular-nums}
+
+/* decisions */
+.decisions{list-style:none;padding:0;margin:8px 0 0;display:grid;gap:12px;counter-reset:d}
+.decisions li{max-width:none;margin:0;background:var(--surface);border:1px solid var(--rule);border-radius:12px;padding:16px 18px 14px 58px;position:relative;counter-increment:d}
+.decisions li::before{content:counter(d);position:absolute;left:18px;top:14px;width:26px;height:26px;border-radius:50%;background:var(--ink);color:var(--surface);font-family:var(--mono);font-size:13px;display:grid;place-items:center}
+.decisions .q{font-weight:700;display:block;margin-bottom:4px}
+.decisions .rec{display:inline-block;font-size:12px;font-weight:700;color:var(--pos);background:var(--pos-soft);border-radius:999px;padding:1px 8px;margin-right:6px}
+
+/* timeline */
+.tl{list-style:none;margin:18px 0 8px;padding:0;position:relative}
+.tl::before{content:"";position:absolute;left:112px;top:6px;bottom:6px;width:1px;background:var(--rule-strong)}
+.tl li{max-width:none;display:grid;grid-template-columns:100px 1fr;gap:24px;margin:0;padding:7px 0;position:relative}
+.tl li::after{content:"";position:absolute;left:108px;top:15px;width:9px;height:9px;border-radius:50%;background:var(--surface);border:2px solid var(--ink-3)}
+.tl .d{font-family:var(--mono);font-size:12.5px;color:var(--ink-3);padding-top:2px;text-align:right;font-variant-numeric:tabular-nums}
+.tl .e{font-size:14px;color:var(--ink-2)}
+.tl .e b{color:var(--ink)}
+.tl li.today .d{color:var(--accent);font-weight:500}
+.tl li.today::after{background:var(--accent);border-color:var(--accent)}
+.tl li.today .e{color:var(--accent);font-weight:700}
+.tl li.cliff{background:var(--neg-soft);border-radius:8px}
+.tl li.cliff .d{color:var(--neg);font-weight:500}
+.tl li.cliff::after{background:var(--neg);border-color:var(--neg);width:11px;height:11px;left:107px;top:14px}
+.tl li.future .e{color:var(--ink)}
+.tl li.future::after{border-color:var(--rule-strong)}
+.tl-legend{display:flex;flex-wrap:wrap;gap:6px 18px;font-size:12.5px;color:var(--ink-3)}
+.tl-legend i{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:6px;vertical-align:-1px;border:2px solid var(--ink-3);background:var(--surface)}
+.tl-legend i.c{background:var(--neg);border-color:var(--neg)}
+.tl-legend i.t{background:var(--accent);border-color:var(--accent)}
+@media(max-width:560px){
+  .tl::before{left:84px}
+  .tl li{grid-template-columns:74px 1fr;gap:22px}
+  .tl li::after{left:80px}
+  .tl li.cliff::after{left:79px}
+  .tl .d{font-size:11.5px}
+}
+
+/* topic card */
+.topic{background:var(--surface);border:1px solid var(--rule);border-radius:14px;padding:6px clamp(16px,2.6vw,24px) 10px;margin:14px 0 8px}
+.topic-head{display:flex;flex-wrap:wrap;gap:8px;align-items:center;padding:14px 0 12px;border-bottom:1px solid var(--rule)}
+.topic-head .lbl{font-size:12.5px;color:var(--ink-3);margin-right:4px}
+.kv{display:grid;grid-template-columns:1fr;margin:0}
+.kv > div{display:grid;grid-template-columns:132px minmax(0,1fr);gap:16px;padding:11px 0;border-bottom:1px solid var(--rule)}
+.kv > div:last-child{border-bottom:0}
+.kv dt{font-size:12.5px;font-weight:700;color:var(--ink-3);padding-top:2px}
+.kv dd{margin:0;font-size:14.5px}
+.kv dd p,.kv dd li{max-width:none}
+.kv dd ul{margin:4px 0 0}
+.kv dd p:last-child,.kv dd ul:last-child{margin-bottom:0}
+@media(max-width:640px){.kv > div{grid-template-columns:1fr;gap:4px}}
+.plain{background:var(--accent-soft);border-radius:8px;padding:8px 12px}
+
+/* chart */
+.chart{background:var(--surface);border:1px solid var(--rule);border-radius:14px;padding:18px clamp(14px,2.4vw,24px) 14px;margin:18px 0}
+.chart-title{font-weight:700;font-size:15px;margin:0 0 2px}
+.chart-sub{font-size:13px;color:var(--ink-3);margin:0 0 12px}
+.legend{display:flex;flex-wrap:wrap;gap:6px 18px;font-size:13px;color:var(--ink-2);margin:0 0 12px}
+.legend i{display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:6px;vertical-align:-1px}
+.grp{margin:14px 0 6px}
+.grp-name{font-size:13px;font-weight:700;color:var(--ink-2);margin:0 0 6px}
+.plot{--lab:6.6rem;display:grid;grid-template-columns:62px minmax(0,1fr);gap:0 10px}
+.axis-row{grid-column:2;position:relative;height:18px;font-family:var(--mono);font-size:11px;color:var(--ink-3)}
+.axis-row span{position:absolute;left:calc((100% - var(--lab)) * var(--t));transform:translateX(-50%);white-space:nowrap}
+.axis-row span:first-child{transform:none}
+.row-lab{font-family:var(--mono);font-size:12px;color:var(--ink-2);padding-top:3px;line-height:1.35}
+.row-lab em{display:block;font-style:normal;font-size:11px;color:var(--pos)}
+.bars{position:relative;padding:3px 0 9px}
+.bars .gl{position:absolute;top:0;bottom:6px;width:1px;background:var(--grid);left:calc((100% - var(--lab)) * var(--t))}
+.bar-line{position:relative;display:flex;align-items:center;gap:6px;height:20px;margin-bottom:2px}
+.bar{height:16px;width:calc((100% - var(--lab)) * var(--p));border-radius:0 4px 4px 0;cursor:default;flex:none}
+.bar.s1{background:var(--series-1)}
+.bar.s2{background:var(--series-2)}
+.bar:hover,.bar:focus-visible{filter:brightness(1.08);outline-offset:2px}
+.bar-val{font-family:var(--mono);font-size:11.5px;color:var(--ink-2);white-space:nowrap;font-variant-numeric:tabular-nums}
+.tip{position:fixed;z-index:10;pointer-events:none;background:var(--ink);color:var(--surface);font-size:12.5px;line-height:1.5;padding:8px 10px;border-radius:8px;box-shadow:var(--shadow);max-width:260px}
+.tip b{display:block;font-weight:700}
+.chart-note{font-size:12.5px;color:var(--ink-3);margin:10px 0 0;max-width:none}
+details.data{margin-top:10px;font-size:13px}
+details.data summary{cursor:pointer;color:var(--accent);font-weight:500}
+
+/* path grid */
+.paths{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:12px;margin:14px 0}
+.path{background:var(--surface);border:1px solid var(--rule);border-radius:12px;padding:16px 18px;display:grid;gap:8px;align-content:start}
+.path h4{margin:0;font-size:15px}
+.path .row{font-size:13.5px}
+.path .row b{display:block;font-size:12px;color:var(--ink-3);font-weight:700}
+.path .jd{margin-top:4px;padding-top:10px;border-top:1px solid var(--rule);font-size:13.5px}
+.path.current{border-color:var(--pos);box-shadow:inset 0 0 0 1px var(--pos)}
+
+/* priority blocks */
+.plist{display:grid;gap:10px;margin:10px 0 18px}
+.pitem{background:var(--surface);border:1px solid var(--rule);border-radius:12px;padding:14px 18px}
+.pitem .ph{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:6px}
+.pitem .pid{font-family:var(--mono);font-size:12.5px;color:var(--ink-3)}
+.pitem .pt{font-weight:700}
+.pitem p{margin:0 0 6px;max-width:none;font-size:14.5px}
+.pitem p:last-child{margin-bottom:0}
+.why{font-size:13.5px;color:var(--neg)}
+.none{font-size:14.5px;color:var(--ink-2);background:var(--surface);border:1px dashed var(--rule-strong);border-radius:12px;padding:12px 16px;margin:10px 0 18px}
+h3.plevel{display:flex;align-items:center;gap:10px;font-family:var(--mono);font-size:15px;font-weight:500;margin-top:24px}
+h3.plevel small{font-family:var(--sans);font-size:13px;color:var(--ink-3);font-weight:400}
+
+footer.foot{margin-top:40px;font-size:12.5px;color:var(--ink-3);display:grid;gap:6px}
+footer.foot p{max-width:none;margin:0}
+@media print{.toc{display:none}.layout{grid-template-columns:1fr}body{background:#fff}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="strip">
+    <span><b>政策情报</b> · 公司影响评估</span>
+    <span>报告截止 <b>2026-09-21</b></span>
+    <span>访问日期 2026-09-21</span>
+    <span>供决策参考 · 非法律意见</span>
+  </div>
+
+  <header class="mast">
+    <div>
+      <p class="eyebrow">长江存储 · 致态 ZhiTai · 韩国市场</p>
+      <h1>长江存储“致态”消费级 SSD 出海韩国：政策与经营利弊评估</h1>
+      <p class="lede">致态已于 2026 年 6 月经韩国经销商도우정보正式入韩。本报告评估的是“已进入之后该怎么走”：哪些利好当下可以拿到，哪些风险取决于进入路径和中美美韩的政策走向。</p>
+    </div>
+    <dl class="meta-grid">
+      <dt>回看区间</dt><dd>2026-06-21 至 2026-09-21（例外纳入 2026-06-02 至 06-12 致态韩国发布事件，以及仍在持续生效的美国实体清单、1260H 清单、中美“休战”暂停措施，原因见 2.4）</dd>
+      <dt>前瞻区间</dt><dd>2026-09-21 至 2027-03-21（2027-06-30、2027-12-23 两个美国采购禁令节点超出半年，单列为长期事项）</dd>
+      <dt>重点</dt><dd>韩国国家层面；消费级 NVMe SSD（TiPro9000 / TiPlus9100 / TiPlus7100s）；基准情景为“韩国本地经销 + 电商/跨境零售”，对比“设立韩国子公司”“B2B/OEM”</dd>
+      <dt>视角</dt><dd>长江存储 / 致态品牌方（用户确认）</dd>
+      <dt>读者</dt><dd>管理层、公共事务、法务、财务</dd>
+    </dl>
+  </header>
+
+  <div class="verdict" role="region" aria-label="总体判断">
+    <div class="v-top">
+      <div>
+        <div class="v-label">总体方向（经销 + 消费级零售）</div>
+        <div class="v-main">中性偏利好</div>
+      </div>
+      <div class="v-kpis">
+        <span>影响程度 <b>中</b></span>
+        <span>结论置信度 <b>中</b></span>
+        <span>最大反向风险 <b>“11月悬崖”</b></span>
+      </div>
+    </div>
+    <div class="scale" aria-label="方向刻度">
+      <div class="cell"><span class="nm">利空</span></div>
+      <div class="cell alt"><span class="nm">中性偏利空</span><span class="note">改走韩国控股子公司或 B2B/OEM 时</span></div>
+      <div class="cell on"><span class="nm">中性偏利好</span><span class="note">当前“经销商 + 消费级零售”模式</span></div>
+      <div class="cell"><span class="nm">利好</span></div>
+    </div>
+    <p class="v-why">韩国对中国产 SSD 没有专门准入壁垒；三星/SK 转产企业级、美光退出 Crucial 消费业务造成了真实的供给空档和价差，这些利好当下就能拿到。主要风险来自美国对长存的管制体系和“盟友协同”压力，但目前主要落在子公司、B2B 路径和声誉层面，经销零售模式受直接冲击有限。</p>
+  </div>
+
+  <div class="layout">
+    <nav class="toc" aria-label="目录">
+      <p>目录</p>
+      <ol>
+        <li><a href="#s-1"><span>01</span>管理层一页摘要</a></li>
+        <li><a href="#s-tl"><span>—</span>关键时间轴</a></li>
+        <li><a href="#s-2"><span>02</span>背景、范围与证据</a></li>
+        <li><a href="#s-3"><span>03</span>总体态势与政策动因</a></li>
+        <li><a href="#s-4"><span>04</span>现实张力专题</a></li>
+        <li><a class="sub" href="#t-41">4.1 供给空档与价格窗口</a></li>
+        <li><a class="sub" href="#t-42">4.2 准入与合规底线</a></li>
+        <li><a class="sub" href="#t-43">4.3 “11月悬崖”</a></li>
+        <li><a class="sub" href="#t-44">4.4 盟友协同压力</a></li>
+        <li><a class="sub" href="#t-45">4.5 产业安全叙事</a></li>
+        <li><a class="sub" href="#t-46">4.6 进入路径比较</a></li>
+        <li><a href="#s-5"><span>05</span>公司影响评估</a></li>
+        <li><a href="#s-6"><span>06</span>合规风险</a></li>
+        <li><a href="#s-7"><span>07</span>政策机会</a></li>
+        <li><a href="#s-8"><span>08</span>行动计划</a></li>
+        <li><a href="#s-9"><span>09</span>未来关注点</a></li>
+        <li><a href="#s-10"><span>10</span>条件、例外与失效点</a></li>
+        <li><a href="#s-11"><span>11</span>来源与证据台账</a></li>
+      </ol>
+    </nav>
+
+    <main>
+      <div class="callout small">
+        <strong>标注说明：</strong>
+        <span class="tag">P-F</span>公开事实
+        <span class="tag a">P-A</span>分析推论
+        <span class="tag s">S</span>情景假设
+        <span class="tag q">Q</span>待确认
+        <span class="tag u">U-F</span>用户陈述；
+        <a class="cite" href="#src-s1">S1</a> 等为来源编号，点击跳转至第 11 章台账。本报告用于政策与经营决策参考，不替代韩国、美国执业律师或税务师的正式意见。
+      </div>
+
+      <!-- ===== 1 ===== -->
+      <section class="sec" id="s-1">
+        <p class="sec-no">01</p>
+        <h2>管理层一页摘要</h2>
+
+        <h3>1.1 总体判断</h3>
+        <ul>
+          <li><strong>总体方向：中性偏利好</strong>（仅针对当前的“经销商 + 消费级零售”模式；若改走“韩国控股子公司”或“B2B/OEM”，判断降为<strong>中性偏利空</strong>）。</li>
+          <li><strong>影响程度：中。</strong>韩国消费级 SSD 的收入体量相对长存整体营收很小 <span class="tag a">P-A</span>，但作为进入三星、SK 海力士本土市场的“示范性”动作，对品牌、IPO 叙事和地缘关注度的影响明显大于其财务贡献。</li>
+          <li><strong>结论置信度：中。</strong>市场窗口与韩国准入规则证据较强（L1/L3 交叉）；美国政策走向、公司在韩销售结构和供货安排证据不足。</li>
+          <li><strong>判断成立条件：</strong>① 中美在 2026-11-10 前后没有全面恢复对抗性措施；② 美国行政部门没有把国会 7 月 16 日的“盟友协同”诉求落成针对韩国的正式安排；③ 致态能稳定供货、守住价格纪律，不在韩国形成“低价倾销”的印象。</li>
+          <li><strong>最大反向风险：“11月悬崖”。</strong>美国“关联方规则”暂停期于 2026-11-09 结束，中国商务部对“256 层及以上存储芯片”用途的稀土管制暂停期于 2026-11-10 结束 <span class="tag">P-F</span><a class="cite" href="#src-s18">S18</a><a class="cite" href="#src-s19">S19</a><a class="cite" href="#src-s20">S20</a>。如果 9 月 24 日中美首脑会晤没能续期“休战”，韩国会同时承受美方的盟友协同压力和中方对韩国存储产业的反制风险，致态在韩国的高曝光度可能被政治化。</li>
+        </ul>
+
+        <h3>1.2 优先级与紧迫度矩阵</h3>
+        <div class="tbl xwide">
+          <table>
+            <thead><tr><th>事项</th><th>地域与层级</th><th>方向</th><th>紧迫度</th><th>优先级</th><th>公司影响</th><th>关键变量</th><th>置信度</th><th>决策时点</th></tr></thead>
+            <tbody>
+              <tr><td><b>A. 供给空档与价格窗口</b></td><td>全球产业 → 韩国零售</td><td><span class="dir pos">+2 短期</span></td><td><span class="urg now">即时决策</span></td><td><span class="pri">机会 P1</span></td><td>装机渠道和零售份额的获取窗口；Q4 旺季供货</td><td>三星/SK 消费级产能回补速度；长存对韩供货配额</td><td>中（窗口存在：高；持续时间：中）</td><td class="nw">2026-10-15 前定 Q4 配额</td></tr>
+              <tr><td><b>B. 韩国准入与合规底线</b>（电波法 KC、EPR、电商法、关税）</td><td>韩国国家层面</td><td><span class="dir pos">+1</span></td><td><span class="urg prep">窗口内准备</span></td><td><span class="pri">风险 P1</span></td><td>准入开放、成本低；义务主要落在进口商（经销商）</td><td>KC 登记主体；EPR 义务人；是否跨境直营</td><td>中（规则：高；公司状态：待确认）</td><td class="nw">2026-10-05 前完成合规核查</td></tr>
+              <tr><td><b>C. 美国管制体系与“11月悬崖”</b>（实体清单、关联方规则、中方稀土反制暂停到期）</td><td>美国联邦 / 中国国家 → 韩国合作方</td><td><span class="dir mix">经销 0～−1</span><br><span class="dir neg">子公司 −2</span></td><td><span class="urg now">即时决策</span></td><td><span class="pri">风险 P1</span></td><td>决定韩国主体架构能否搭建；合作方尽调压力</td><td>9-24 中美会晤结果；暂停是否续期</td><td>规则事实：高；走向：中</td><td class="nw">2026-11-09 前冻结子公司决策</td></tr>
+              <tr><td><b>D. 美国采购禁令</b>（805 条款、5949 条款）</td><td>美国联邦 → 韩国 OEM/集成商</td><td><span class="dir neg">B2B −1</span><br><span class="dir mix">零售 0</span></td><td><span class="urg prep">窗口内准备</span></td><td><span class="pri">风险 P2</span></td><td>封住面向有美国政府业务客户的 B2B 路径</td><td>韩国客户的美国联邦/国防暴露</td><td>高（法定日期）</td><td class="nw">2026-12-31 前出客户准入规则</td></tr>
+              <tr><td><b>E. 美国国会推动“盟友协同”限制长存</b></td><td>美国国会 → 美韩双边</td><td><span class="dir neg">−1（尾部 −2）</span></td><td><span class="urg watch">跟踪观察</span></td><td><span class="pri">风险 P2</span></td><td>合作方去风险化、渠道收缩、舆论安全化</td><td>商务部是否出行政指引；美韩联合声明</td><td>中（目前只是表态）</td><td>触发即启动预案</td></tr>
+              <tr><td><b>F. 韩国产业安全叙事与消费者信任</b></td><td>韩国国家 / 社会舆论</td><td><span class="dir neg">−1</span></td><td><span class="urg prep">窗口内准备</span></td><td><span class="pri">风险 P1</span></td><td>品牌溢价受限；媒体把“入韩”写成“叫板三星/SK”</td><td>发布期的传播口径；售后兑现</td><td>中</td><td class="nw">2026-10-15 前定韩文口径</td></tr>
+              <tr><td><b>G. 韩国贸易救济</b>（周期下行时）</td><td>韩国贸易委员会</td><td><span class="dir neg">−1 潜在</span></td><td><span class="urg watch">跟踪观察</span></td><td><span class="pri">风险 P3</span></td><td>若低价冲量，存在被申请反倾销的可能</td><td>NAND 合约价拐点；份额增速</td><td>低</td><td>每季度复查</td></tr>
+              <tr><td><b>H. 韩中关系“全面复原”</b></td><td>韩中双边</td><td><span class="dir pos">+1</span></td><td><span class="urg watch">跟踪观察</span></td><td><span class="pri">机会 P3</span></td><td>政治环境不对中国消费电子设限；知识产权合作 MOU</td><td>韩中 FTA 第二阶段进展</td><td>中</td><td>每季度复查</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="small muted">紧迫度是管理时间判断（即时决策 / 窗口内准备 / 跟踪观察），不代表证据可靠度。各行的论证见第 4、5 章。</p>
+
+        <h3>1.3 管理层需要决定的三件事</h3>
+        <ol class="decisions">
+          <li><span class="q">在 2026-11-10 之前，是否冻结“设立韩国控股子公司”的计划，继续走经销商模式？</span><span class="rec">建议冻结</span>美国关联方规则一旦恢复，长存持股 50% 及以上的非上榜关联实体将自动适用实体清单限制 <span class="tag">P-F</span><a class="cite" href="#src-s18">S18</a>，韩国子公司会成为合作方尽调和舆论的焦点，而经销商模式在法律上与长存保持距离、可逆性强。等 9-24 会晤和 11 月续期结果出来再决定。</li>
+          <li><span class="q">是否把韩国定为“消费级零售 + 装机渠道”的试点，并为 2026 年第四季度锁定供货和“以换代退”的售后承诺？</span><span class="rec">建议是</span>但设两条纪律：供货上限（不挤占国内和企业级）、价格下限（不以低于三星同级 30% 以上的幅度持续冲量）。三星、SK 在缺货时按“索赔时市场价值”退款、不换新，已引发韩国消费者不满 <span class="tag">P-F</span><a class="cite" href="#src-s9">S9</a>，这是致态用“保换新”建立信任的差异化机会。</li>
+          <li><span class="q">是否暂缓面向韩国 B2B/OEM 的大客户合作，尤其是有美国联邦或国防业务的客户？</span><span class="rec">建议暂缓</span>先制定客户准入规则。美国 5949 条款自 2027-12-23 起禁止联邦机构采购含长存芯片的电子产品，805 条款对国防部的产品级禁令自 2027-06-30 起生效 <span class="tag">P-F</span><a class="cite" href="#src-s15">S15</a><a class="cite" href="#src-s16">S16</a><a class="cite" href="#src-s17">S17</a>；国会 7 月 16 日的信函要求与韩国协同，防止长存“利用盟友供应链” <span class="tag">P-F</span><a class="cite" href="#src-s22">S22</a>。B2B 恰好是这类表态最直接针对的领域。</li>
+        </ol>
+      </section>
+      <!-- ===== timeline ===== -->
+      <section class="sec" id="s-tl">
+        <p class="sec-no">时间轴</p>
+        <h2>关键时间轴：从入韩到“11月悬崖”</h2>
+        <p>以下节点均来自本报告正文引用的来源，按时间排列。11 月 9 日至 10 日两项暂停同时到期，是前瞻期内最重要的决策窗口。</p>
+        <div class="tl-legend"><span><i></i>已发生 / 计划中</span><span><i class="t"></i>报告截止日</span><span><i class="c"></i>暂停措施到期</span></div>
+        <ol class="tl">
+          <li><span class="d">2025-10-09</span><span class="e">中国商务部第 61 号公告：用于研发、生产“256 层及以上存储芯片”的相关稀土物项出口逐案审批 <a class="cite" href="#src-s19">S19</a></span></li>
+          <li><span class="d">2025-11-07</span><span class="e">中方第 70 号公告暂停第 61 号等公告；美方关联方规则自 11-10 起暂停一年 <a class="cite" href="#src-s20">S20</a><a class="cite" href="#src-s18">S18</a></span></li>
+          <li><span class="d">2025-12-03</span><span class="e">美光宣布退出 Crucial 消费业务，消费渠道供货至 2026 年 2 月 <a class="cite" href="#src-s8">S8</a></span></li>
+          <li><span class="d">2026-01-05</span><span class="e">李在明与习近平北京会谈，定调“韩中关系全面复原元年” <a class="cite" href="#src-s24">S24</a></span></li>
+          <li><span class="d">2026-01-29</span><span class="e">韩国《半导体特别法》国会通过，预计三季度施行 <a class="cite" href="#src-s26">S26</a></span></li>
+          <li><span class="d">2026-02-17</span><span class="e">美国 FAR 5949 条款拟议规则公布 <a class="cite" href="#src-s16">S16</a></span></li>
+          <li><span class="d">2026-06-02</span><span class="e"><b>致态台北电脑展发布三款新品，宣布拓展韩国、新加坡</b> <a class="cite" href="#src-s1">S1</a></span></li>
+          <li><span class="d">2026-06-10</span><span class="e">新版 1260H 清单公布，仍包含长存 <a class="cite" href="#src-s14">S14</a></span></li>
+          <li><span class="d">2026-06-11</span><span class="e"><b>도우정보宣布致态在韩正式上市</b> <a class="cite" href="#src-s2">S2</a></span></li>
+          <li><span class="d">2026-06-30</span><span class="e">805 条款：国防部合同禁令生效 <a class="cite" href="#src-s15">S15</a></span></li>
+          <li><span class="d">2026-07-16</span><span class="e">美国众议院中共问题特设委员会致信商务部长，点名与韩国协同 <a class="cite" href="#src-s22">S22</a></span></li>
+          <li><span class="d">2026-08-21</span><span class="e">长存控股科创板 IPO 申请获受理 <a class="cite" href="#src-s35">S35</a></span></li>
+          <li class="today"><span class="d">2026-09-21</span><span class="e">报告截止日</span></li>
+          <li class="future"><span class="d">2026-09-24</span><span class="e">习近平赴白宫与特朗普会晤，讨论延长 11 月到期的“休战”（计划） <a class="cite" href="#src-s21">S21</a></span></li>
+          <li class="cliff"><span class="d">2026-11-09</span><span class="e"><b>美方关联方规则暂停期结束</b>，计划 11-10 恢复 <a class="cite" href="#src-s18">S18</a></span></li>
+          <li class="cliff"><span class="d">2026-11-10</span><span class="e"><b>中方第 61 号公告暂停期结束</b> <a class="cite" href="#src-s20">S20</a></span></li>
+          <li class="future"><span class="d">2027-06-30</span><span class="e">805 条款：国防部产品级禁令生效 <a class="cite" href="#src-s15">S15</a></span></li>
+          <li class="future"><span class="d">2027-12-23</span><span class="e">5949 条款：联邦机构采购禁令生效 <a class="cite" href="#src-s16">S16</a><a class="cite" href="#src-s17">S17</a></span></li>
+        </ol>
+      </section>
+
+      <!-- ===== 2 ===== -->
+      <section class="sec" id="s-2">
+        <p class="sec-no">02</p>
+        <h2>公司运营背景、范围与证据说明</h2>
+
+        <h3>2.1 已确认事实</h3>
+        <ul>
+          <li><span class="tag u">U-F</span>用户确认：分析视角为长江存储/致态品牌方；进入方式未定，按“消费级跨境电商 + 本地分销”基准情景分析，并对比其他路径。</li>
+          <li><span class="tag">P-F</span>2026-06-02，致态在台北电脑展发布 TiPro9000（PCIe 5.0，读 14,900MB/s）、TiPlus9100（PCIe 5.0）、TiPlus7100s（PCIe 4.0）三款产品，宣布将“逐步拓展至韩国和新加坡等市场”，并与华硕推出联名产品，均提供 5 年质保 <a class="cite" href="#src-s1">S1</a>。</li>
+          <li><span class="tag">P-F</span>2026-06-11，韩国 IT 经销商<strong>도우정보（Dowoo Information）</strong>宣布作为致态在韩正式经销商上市三款产品，渠道为 컴퓨존、아이코다、컴퓨터코리아 等电脑专业商城，计划年内追加产品线 <a class="cite" href="#src-s2">S2</a>。ZDNet Korea 报道经销商称“长存的供货涨价幅度与主要 SSD 厂商相比处于相对较低水平”，并以组装机厂商为重点渠道 <a class="cite" href="#src-s3">S3</a>。</li>
+          <li><span class="tag">P-F</span>致态此前曾进入韩国：其 SATA 产品 SC001 于 2021 年 2 月登录韩国比价平台 Danawa，目前已无在售商家 <a class="cite" href="#src-s4">S4</a>；中文媒体称此次为“睽违 4 年重返韩国” <a class="cite" href="#src-s40">S40</a>。上次退出原因未检索到可核验说明 <span class="tag q">Q</span>。</li>
+          <li><span class="tag">P-F</span>截至 2026-09-21，Danawa 最低价：TiPro9000 2TB 为 ₩639,700，三星 9100 PRO 2TB 为 ₩941,950（便宜约 32%）；TiPlus7100s 2TB 为 ₩516,900，三星 990 PRO 2TB 为 ₩565,580（便宜约 9%） <a class="cite" href="#src-s5">S5</a>。注意：TiPlus7100s 为无缓存设计，990 PRO 带 DRAM 缓存，不是严格同级比较；比价平台价格为时点数据。完整比价见下图。</li>
+          <li><span class="tag">P-F</span>2026 年 3 月起，Coupang 上已出现 TiPlus7100s“海外购买”（平行进口）版本，1TB 售价 ₩319,200，比正规渠道高约 10% <a class="cite" href="#src-s5">S5</a>。</li>
+          <li><span class="tag">P-F</span>长存控股科创板 IPO 申请于 2026-08-21 获上交所受理，拟募资 330 亿元；2026 年一季度营收 470.4 亿元、净利润 333.8 亿元；一季度 NAND 销售额与出货量均为全球第三 <a class="cite" href="#src-s35">S35</a>。</li>
+          <li><span class="tag">P-F</span>长江存储自 2022-12-16 起列入美国实体清单（87 FR 77505），所有受 EAR 管辖物项均需许可，审查政策为“推定拒绝” <a class="cite" href="#src-s11">S11</a>；2026-06-10 公布的新版 1260H“中国军事企业”清单仍包含长存 <a class="cite" href="#src-s14">S14</a>。</li>
+        </ul>
+
+        <figure class="chart" id="price-chart" aria-labelledby="pc-title">
+          <p class="chart-title" id="pc-title">韩国零售最低价：致态 vs 三星同定位产品</p>
+          <p class="chart-sub">单位：韩元（₩），Danawa 最低价，2026-09-21 时点数据 <a class="cite" href="#src-s5">S5</a>；行标签下方为致态相对三星的价差</p>
+          <div class="legend"><span><i style="background:var(--series-1)"></i>致态 ZhiTai</span><span><i style="background:var(--series-2)"></i>三星 Samsung</span></div>
+
+          <div class="grp">
+            <p class="grp-name">PCIe 5.0 旗舰：TiPro9000 vs 9100 PRO</p>
+            <div class="plot">
+              <div></div>
+              <div class="axis-row"><span style="--t:0">0</span><span style="--t:.2778">50 万</span><span style="--t:.5556">100 万</span><span style="--t:.8333">150 万</span></div>
+              <div class="row-lab">1TB<em>−12.1%</em></div>
+              <div class="bars"><i class="gl" style="--t:.2778"></i><i class="gl" style="--t:.5556"></i><i class="gl" style="--t:.8333"></i>
+                <div class="bar-line"><span class="bar s1" style="--p:.2156" tabindex="0" data-tip="致态 TiPro9000 1TB|₩388,080|比 9100 PRO 低 12.1%"></span><span class="bar-val">₩388,080</span></div>
+                <div class="bar-line"><span class="bar s2" style="--p:.2452" tabindex="0" data-tip="三星 9100 PRO 1TB|₩441,430"></span><span class="bar-val">₩441,430</span></div>
+              </div>
+              <div class="row-lab">2TB<em>−32.1%</em></div>
+              <div class="bars"><i class="gl" style="--t:.2778"></i><i class="gl" style="--t:.5556"></i><i class="gl" style="--t:.8333"></i>
+                <div class="bar-line"><span class="bar s1" style="--p:.3554" tabindex="0" data-tip="致态 TiPro9000 2TB|₩639,700|比 9100 PRO 低 32.1%"></span><span class="bar-val">₩639,700</span></div>
+                <div class="bar-line"><span class="bar s2" style="--p:.5233" tabindex="0" data-tip="三星 9100 PRO 2TB|₩941,950"></span><span class="bar-val">₩941,950</span></div>
+              </div>
+              <div class="row-lab">4TB<em>−29.7%</em></div>
+              <div class="bars"><i class="gl" style="--t:.2778"></i><i class="gl" style="--t:.5556"></i><i class="gl" style="--t:.8333"></i>
+                <div class="bar-line"><span class="bar s1" style="--p:.6350" tabindex="0" data-tip="致态 TiPro9000 4TB|₩1,142,970|比 9100 PRO 低 29.7%"></span><span class="bar-val">₩1,142,970</span></div>
+                <div class="bar-line"><span class="bar s2" style="--p:.9027" tabindex="0" data-tip="三星 9100 PRO 4TB|₩1,624,790"></span><span class="bar-val">₩1,624,790</span></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="grp">
+            <p class="grp-name">PCIe 4.0 主流：TiPlus7100s（无缓存）vs 990 PRO（带 DRAM）</p>
+            <div class="plot">
+              <div></div>
+              <div class="axis-row"><span style="--t:0">0</span><span style="--t:.2778">50 万</span><span style="--t:.5556">100 万</span><span style="--t:.8333">150 万</span></div>
+              <div class="row-lab">1TB<em>−26.5%</em></div>
+              <div class="bars"><i class="gl" style="--t:.2778"></i><i class="gl" style="--t:.5556"></i><i class="gl" style="--t:.8333"></i>
+                <div class="bar-line"><span class="bar s1" style="--p:.1588" tabindex="0" data-tip="致态 TiPlus7100s 1TB|₩285,900|比 990 PRO 低 26.5%"></span><span class="bar-val">₩285,900</span></div>
+                <div class="bar-line"><span class="bar s2" style="--p:.2162" tabindex="0" data-tip="三星 990 PRO 1TB|₩389,160"></span><span class="bar-val">₩389,160</span></div>
+              </div>
+              <div class="row-lab">2TB<em>−8.6%</em></div>
+              <div class="bars"><i class="gl" style="--t:.2778"></i><i class="gl" style="--t:.5556"></i><i class="gl" style="--t:.8333"></i>
+                <div class="bar-line"><span class="bar s1" style="--p:.2872" tabindex="0" data-tip="致态 TiPlus7100s 2TB|₩516,900|比 990 PRO 低 8.6%"></span><span class="bar-val">₩516,900</span></div>
+                <div class="bar-line"><span class="bar s2" style="--p:.3142" tabindex="0" data-tip="三星 990 PRO 2TB|₩565,580"></span><span class="bar-val">₩565,580</span></div>
+              </div>
+              <div class="row-lab">4TB<em>−13.8%</em></div>
+              <div class="bars"><i class="gl" style="--t:.2778"></i><i class="gl" style="--t:.5556"></i><i class="gl" style="--t:.8333"></i>
+                <div class="bar-line"><span class="bar s1" style="--p:.5469" tabindex="0" data-tip="致态 TiPlus7100s 4TB|₩984,400|比 990 PRO 低 13.8%"></span><span class="bar-val">₩984,400</span></div>
+                <div class="bar-line"><span class="bar s2" style="--p:.6342" tabindex="0" data-tip="三星 990 PRO 4TB|₩1,141,540"></span><span class="bar-val">₩1,141,540</span></div>
+              </div>
+            </div>
+          </div>
+          <p class="chart-note">PCIe 4.0 组为无缓存对有缓存，不是严格同级比较。比价平台价格每日波动，只反映访问当日的时点状态。平行进口参考：Coupang“海外购买”TiPlus7100s 1TB 为 ₩319,200，比正规渠道高约 10%。</p>
+          <details class="data">
+            <summary>查看数据表</summary>
+            <div class="tbl"><table>
+              <thead><tr><th>组别</th><th>容量</th><th>致态</th><th>三星</th><th>价差</th></tr></thead>
+              <tbody>
+                <tr><td>PCIe 5.0：TiPro9000 vs 9100 PRO</td><td>1TB</td><td class="num">₩388,080</td><td class="num">₩441,430</td><td class="num">−12.1%</td></tr>
+                <tr><td>PCIe 5.0：TiPro9000 vs 9100 PRO</td><td>2TB</td><td class="num">₩639,700</td><td class="num">₩941,950</td><td class="num">−32.1%</td></tr>
+                <tr><td>PCIe 5.0：TiPro9000 vs 9100 PRO</td><td>4TB</td><td class="num">₩1,142,970</td><td class="num">₩1,624,790</td><td class="num">−29.7%</td></tr>
+                <tr><td>PCIe 4.0：TiPlus7100s vs 990 PRO</td><td>1TB</td><td class="num">₩285,900</td><td class="num">₩389,160</td><td class="num">−26.5%</td></tr>
+                <tr><td>PCIe 4.0：TiPlus7100s vs 990 PRO</td><td>2TB</td><td class="num">₩516,900</td><td class="num">₩565,580</td><td class="num">−8.6%</td></tr>
+                <tr><td>PCIe 4.0：TiPlus7100s vs 990 PRO</td><td>4TB</td><td class="num">₩984,400</td><td class="num">₩1,141,540</td><td class="num">−13.8%</td></tr>
+              </tbody>
+            </table></div>
+          </details>
+        </figure>
+
+        <h3>2.2 分析假设</h3>
+        <ul>
+          <li><span class="tag s">S</span>致态在韩销售由长存（或其关联实体）向도우정보出口、도우정보作为韩国进口商和销售主体；长存在韩国没有法人或常设机构。</li>
+          <li><span class="tag s">S</span>韩国销售以消费级零售和组装机渠道为主，暂无 B2B/OEM 大客户合同。</li>
+          <li><span class="tag s">S</span>韩国业务收入占长存总营收比例很低（未获数据，按“低”处理），因此财务影响评为“中/低”，战略与声誉影响评为“中”。</li>
+        </ul>
+
+        <h3>2.3 待确认事项（最能改变结论的三项）</h3>
+        <ol>
+          <li><span class="tag q">Q</span><strong>在韩销售的法律结构：</strong>向도우정보供货的出口主体是谁（长存本体、致态品牌运营公司，还是境外关联公司）？该主体的长存持股比例？三款产品的 KC 适合登记证书由谁持有？这决定“11月悬崖”对哪个主体有效，以及更换经销商时能否带走认证。</li>
+          <li><span class="tag q">Q</span><strong>供货承诺与韩国目标：</strong>2026 年第四季度至 2027 年上半年对韩供货配额、价格政策、韩国收入目标。这决定“价格窗口”能兑现多少，以及贸易救济风险的大小。</li>
+          <li><span class="tag q">Q</span><strong>B2B/OEM 接触情况：</strong>是否已与韩国整机厂、系统集成商或数据中心客户接触，这些客户是否有美国联邦、国防或关键基础设施业务。</li>
+        </ol>
+        <p>补充以上三项后，本报告可从“经销模式下的初步政策环境评估”升级为公司专属影响分析。</p>
+
+        <h3>2.4 未覆盖范围与原因</h3>
+        <ul>
+          <li><strong>例外纳入的存量事项：</strong>美国实体清单（2022 年）、1260H 清单（2025 年起）、中美“休战”暂停措施（2025 年 11 月起）虽然早于回看区间，但会在前瞻期内到期或持续约束公司，因此纳入。</li>
+          <li><strong>未深入：</strong>韩国个人信息保护法（致态硬件本身基本不收集个人信息，只在直营网店或 App 情况下相关）；韩国税务处理（增值税、转让定价）；新加坡等其他亚太市场；美国市场本身。</li>
+          <li><strong>中国国内政策：</strong>本报告只纳入对韩国业务有直接联动的中方措施（商务部 2025 年第 61、70 号公告）。未发现中国对消费级 SSD 出口有限制性规定；出口退税、跨境电商便利化等支持政策未逐项核验。</li>
+          <li><strong>未检索到可核验信息：</strong>韩国政府对美国国会 7 月 16 日信函的官方回应；韩国公共部门对中国产存储设备的专门采购限制；致态三款产品在韩国的 KC 登记号。</li>
+        </ul>
+      </section>
+
+      <!-- ===== 3 ===== -->
+      <section class="sec" id="s-3">
+        <p class="sec-no">03</p>
+        <h2>总体态势与政策动因</h2>
+
+        <h3>3.1 全球 / 跨区域驱动</h3>
+        <p><strong>发生了什么：</strong>AI 数据中心拉动企业级存储需求，NAND 从 2025 年底开始涨价。三星把产能集中到企业级产品，2025 年 11 月到 2026 年 1 月，韩国市场上三星 9100 PRO 2TB 从约 ₩30 万涨到 ₩60 万 <span class="tag">P-F</span><a class="cite" href="#src-s6">S6</a>；美光 2025-12-03 宣布退出 Crucial 消费业务，消费渠道供货到 2026 年 2 月底为止 <span class="tag">P-F</span><a class="cite" href="#src-s8">S8</a>。Danawa 统计韩国 SSD 价格已是 2023 年夏季低点的 2—3 倍 <span class="tag">P-F</span><a class="cite" href="#src-s7">S7</a>。</p>
+        <p><strong>为什么是现在：</strong>这不是政策驱动，而是产业结构驱动。头部厂商为了利润率把有限产能从消费级转向企业级，消费市场出现了“有需求、缺货源”的空档 <span class="tag a">P-A</span>。长存有自有 NAND 产能，可以在这个空档里用“稳定供货 + 相对低价”切入。</p>
+        <p><strong>如何传导到公司：</strong>这是本次入韩最核心的利好来源，但也有时效性。有行业报道认为存储高价可能持续到 2028 年 <a class="cite" href="#src-s23">S23</a>（属媒体预测，不是事实），一旦三星、SK 的新产能释放，窗口就会收窄 <span class="tag a">P-A</span>。</p>
+
+        <h3>3.2 美国（域外管辖层）</h3>
+        <p>美国对长存的约束有四层，互相叠加：</p>
+        <div class="tbl wide">
+          <table>
+            <thead><tr><th>工具</th><th>法律依据 / 主管机构</th><th>现状</th><th>对韩国业务的传导</th></tr></thead>
+            <tbody>
+              <tr><td><b>实体清单</b></td><td>EAR / 美国商务部 BIS</td><td>2022-12-16 起生效，所有 EAR 物项需许可、推定拒绝 <a class="cite" href="#src-s11">S11</a></td><td>限制的是“向长存出口”，不限制第三方购买长存产品。韩国经销商销售致态不违反美国法律 <span class="tag a">P-A</span></td></tr>
+              <tr><td><b>关联方规则（50% 规则）</b></td><td>EAR / BIS</td><td>2025-09-29 发布，2025-11-10 至 2026-11-09 暂停，计划 2026-11-10 恢复 <a class="cite" href="#src-s18">S18</a></td><td>若长存在韩设立持股 ≥50% 的子公司，恢复后该子公司将自动适用实体清单限制</td></tr>
+              <tr><td><b>1260H 清单 + 805 条款</b></td><td>NDAA FY2021 §1260H；NDAA FY2024 §805 / 国防部</td><td>2025-01-07 起列入 <a class="cite" href="#src-s12">S12</a>，2026-06-10 新版仍含长存，并注明长存由国务院国资委间接持有 <a class="cite" href="#src-s14">S14</a>；国防部合同禁令 2026-06-30 起，产品禁令 2027-06-30 起 <a class="cite" href="#src-s15">S15</a></td><td>有美国国防业务的韩国集成商会回避含长存产品</td></tr>
+              <tr><td><b>5949 条款</b></td><td>NDAA FY2023 §5949 / FAR 理事会</td><td>法定生效日 2027-12-23；FAR 拟议规则 2026-02-17 公布 <a class="cite" href="#src-s16">S16</a><a class="cite" href="#src-s17">S17</a></td><td>美国联邦机构不得采购含长存芯片的电子产品；供应商需做“合理询问”并申报</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p><strong>政策动因：</strong>官方口径是国家安全。实体清单文件称长存有向华为、海康威视转移的风险 <span class="tag">P-F</span><a class="cite" href="#src-s11">S11</a>；据 ZDNet Korea 转述，FAR 拟议规则提到“对手可能在半导体生产中植入后门、恶意固件” <a class="cite" href="#src-s39">S39</a>。深层动因是 NAND 领域的科技竞争：长存一季度已经做到全球第三 <a class="cite" href="#src-s35">S35</a>。</p>
+        <p><strong>竞争解释</strong>（对前瞻判断影响最大，见 4.3）：</p>
+        <ul>
+          <li><strong>假设一：交易筹码型。</strong>依据：2025 年 11 月关联方规则整体暂停 <a class="cite" href="#src-s18">S18</a>；2026 年 2 月国防部曾发布把长存、长鑫移出 1260H 清单的文件，随后撤回 <a class="cite" href="#src-s13">S13</a>；报道称苹果、戴尔、惠普、宏碁、华硕在缺货背景下已开始认证这两家的存储产品 <a class="cite" href="#src-s23">S23</a>。</li>
+          <li><strong>假设二：结构性遏制型。</strong>依据：2026 年 6 月新版 1260H 清单保留长存 <a class="cite" href="#src-s14">S14</a>；5949 条款 FAR 规则在推进 <a class="cite" href="#src-s16">S16</a>；两党议员 2026-07-16 联名致信商务部长，要求加严长存限制并协调韩、日、欧 <a class="cite" href="#src-s22">S22</a>。</li>
+          <li><strong>判别指标：</strong>9-24 中美会晤是否续期“休战”；11-10 前关联方规则暂停是否延长；商务部是否就国会信函出台行政指引，或把长鑫加入实体清单。</li>
+        </ul>
+
+        <h3>3.3 韩国（国家层面，企业直接面对的层级）</h3>
+        <p><strong>发生了什么：</strong></p>
+        <ul>
+          <li><strong>准入规则平稳。</strong>《电波法》第 58 条之 2 规定广播通信设备须经适合性评估，其中“适合登记”覆盖电脑等电磁干扰风险较低的设备，由制造商、进口商或销售商申请 <span class="tag">P-F</span><a class="cite" href="#src-s30">S30</a>；SSD 一般按电脑类设备做 EMC 适合登记 <span class="tag a">P-A</span>，具体品类以国立电波研究院告示和认证机构意见为准；电子电器产品 EPR 自 2026-01-01 起扩大到全品类，年销售额 3 亿韩元以上的进口商负有回收义务（依据立法预告，最终版需复核） <span class="tag">P-F</span><a class="cite" href="#src-s32">S32</a>；《电子商务法》修正案 2025-12-30 通过，一定规模以上的境外经营者须指定国内代理人，公布后 12 个月施行 <span class="tag">P-F</span><a class="cite" href="#src-s31">S31</a>。</li>
+          <li><strong>产业政策趋向防御。</strong>《半导体特别法》2026-01-29 通过，背景是应对“竞争国的技术追赶和大规模补贴”，预计 2026 年第三季度施行 <span class="tag">P-F</span><a class="cite" href="#src-s26">S26</a>；2025 年 12 月检方以泄露三星/SK 技术给长鑫为由起诉 10 人 <span class="tag">P-F</span><a class="cite" href="#src-s28">S28</a>；2026 年上半年韩国反倾销调查申请数创同期新高，8 起全部针对中国，但集中在钢铁、化工 <span class="tag">P-F</span><a class="cite" href="#src-s27">S27</a>。</li>
+          <li><strong>对华关系回暖。</strong>2026-01-05 李在明与习近平在北京会谈，定调“2026 年为韩中关系全面复原元年”，签署含知识产权保护在内的 14 项 MOU <span class="tag">P-F</span><a class="cite" href="#src-s24">S24</a>。</li>
+        </ul>
+        <p><strong>为什么是现在：</strong>韩国政府同时在做两件事：外交上修复对华关系，产业上加强对中国存储追赶的防御。两者并不矛盾：前者针对贸易与民生合作，后者针对技术泄露、补贴竞争和钢化等过剩产能行业 <span class="tag a">P-A</span>。</p>
+        <p><strong>这一层有什么权限：</strong>准入（KC）由科学技术信息通信部下属国立电波研究院管理；EPR 由气候能源环境部管理；电商法由公平交易委员会执法；贸易救济由产业通商部下属贸易委员会调查。对消费级 SSD 而言，目前没有任何一个部门出台专门针对中国产 SSD 的措施 <span class="tag a">P-A</span>。</p>
+        <p><strong>如何传导：</strong>韩国层面目前表现为“准入开放、叙事敏感”。法律上没有障碍，但舆论和产业政策语境会让致态的一举一动被放到“中国存储叫板韩国”的框架里解读（韩媒标题为“中国长存以消费级 SSD 叩响三星、SK 海力士家门” <a class="cite" href="#src-s3">S3</a>，中文媒体标题为“打到三星、SK 海力士老家” <a class="cite" href="#src-s38">S38</a>）。</p>
+
+        <h3>3.4 地区 / 市县层面</h3>
+        <p>未检索到韩国地方政府针对进口电子产品或中国品牌的专门措施。致态零售通过全国性电商与电脑专业商城开展，地方层级对本业务基本没有独立权限 <span class="tag a">P-A</span>。</p>
+      </section>
+      <!-- ===== 4 ===== -->
+      <section class="sec" id="s-4">
+        <p class="sec-no">04</p>
+        <h2>最具现实张力的专题</h2>
+
+        <h3 id="t-41">4.1 供给空档与价格窗口：这次入韩最大的“利”</h3>
+        <div class="topic">
+          <div class="topic-head"><span class="lbl">方向 / 程度 / 置信度</span><span class="dir pos">+2</span><span class="dir mix">程度 中</span><span class="dir mix">置信度 中</span><span class="pri">机会 P1</span></div>
+          <dl class="kv">
+            <div><dt>原文 / 官方口径</dt><dd><span class="tag">P-F</span>美光称退出 Crucial 消费业务是为了“改善对更大战略客户的供货和支持” <a class="cite" href="#src-s8">S8</a>；韩国经销商称三星自 2025 年 12 月起“因集中生产企业级产品，货源没有正常进来” <a class="cite" href="#src-s6">S6</a>；2026 年 8 月，SK 海力士、三星在无货可换时改为按市场价退款，引发消费者不满 <a class="cite" href="#src-s9">S9</a>。美光此前约占韩国 SSD 市场 6%（二手来源） <a class="cite" href="#src-s10">S10</a>。</dd></div>
+            <div><dt>大白话</dt><dd><p class="plain">韩国人买 SSD 的主力品牌缺货、涨价，售后还“只退不换”；美光干脆不做了。货架空出来了，价格也抬上去了。</p></dd></div>
+            <div><dt>动因</dt><dd>企业自主的产能再分配（AI 需求），不是政府政策。但它改变了韩国消费者和装机商的选择集。</dd></div>
+            <div><dt>公司含义</dt><dd><span class="tag a">P-A</span>① 价格：旗舰 PCIe 5.0 2TB 比三星 9100 PRO 便宜约 32%，有明确性价比卖点；主流 PCIe 4.0 价差只有约 9%，并且是无缓存对有缓存，优势有限。② 渠道：组装机商急需稳定货源，“稳定供货”比“低价”更有价值。③ 售后：以 5 年质保 + “保换新”对比三星/SK 的“按市价退款”，是建立信任的最短路径。</dd></div>
+            <div><dt>受影响主体 / 业务</dt><dd>致态品牌；도우정보；韩国组装机与零售渠道。</dd></div>
+            <div><dt>资金与时间</dt><dd>收入正向，量级取决于配额 <span class="tag q">Q</span>；“保换新”需要在韩预留 RMA 库存，形成一笔售后准备金 <span class="tag a">P-A</span>。第四季度是装机旺季，配额需在 10 月中旬前确定。</dd></div>
+            <div><dt>方向 / 程度 / 置信度</dt><dd>+2 / 中 / 中（窗口存在：高；持续时间：中）。</dd></div>
+            <div><dt>成立条件</dt><dd>长存能对韩稳定供货；三星/SK 消费级供给在前瞻期内没有明显回补。</dd></div>
+            <div><dt>关键例外</dt><dd>若长存国内和企业级订单挤占配额，致态在韩“有品无货”会反噬品牌；华为等其他中国品牌同时在抢同一个空档（华为 2025-12-02 在韩推出 TLC 新品，使用长存 NAND） <a class="cite" href="#src-s10">S10</a>。</dd></div>
+            <div><dt>失效点</dt><dd>NAND 合约价转跌、三星/SK 恢复消费级供货并降价；或美国对长存的新限制导致韩国渠道商主动下架。</dd></div>
+            <div><dt>待确认项</dt><dd><span class="tag q">Q</span>对韩配额、价格政策、韩国 RMA 能力（도우정보是否有自有售后中心）。</dd></div>
+            <div><dt>优先级</dt><dd>机会 P1。</dd></div>
+          </dl>
+        </div>
+
+        <h3 id="t-42">4.2 韩国准入与合规底线：法律上“门是开的”，但义务要落到位</h3>
+        <div class="topic">
+          <div class="topic-head"><span class="lbl">方向 / 程度 / 置信度</span><span class="dir pos">+1</span><span class="dir mix">程度 低</span><span class="dir mix">置信度 中</span><span class="pri">风险 P1</span></div>
+          <dl class="kv">
+            <div><dt>原文 / 官方口径</dt><dd><span class="tag">P-F</span>《电波法》第 58 条之 2：适合性评估由制造商、进口商或销售商办理；未经评估制造、销售或进口的将依法处罚 <a class="cite" href="#src-s30">S30</a>。EPR：电子电器产品从 5 类 50 个品目扩大到全品目，2026-01-01 起施行；年销售额低于 3 亿韩元的进口商豁免 <a class="cite" href="#src-s32">S32</a>。《电子商务法》修正案：一定规模以上境外经营者须指定国内代理人，代理人不履职视同境外经营者违法，罚款最高 1,000 万韩元；国内代理人条款在公布后 12 个月施行 <a class="cite" href="#src-s31">S31</a><a class="cite" href="#src-s31b">S31b</a>。关税：SSD 归入 HS 8523.51 <a class="cite" href="#src-s33">S33</a>；个人直购免税额 150 美元，超额按全价征税 <a class="cite" href="#src-s34">S34</a>。</dd></div>
+            <div><dt>大白话</dt><dd><p class="plain">韩国把中国产 SSD 当普通电子产品管：过 KC、贴标、进口商负责回收、在韩卖东西要有人接投诉。没有专门针对中国或长存的门槛。</p></dd></div>
+            <div><dt>动因</dt><dd>消费者保护、电磁安全、资源循环；电商法修订主要针对阿里速卖通、Temu 等大型境外平台 <span class="tag a">P-A</span>。</dd></div>
+            <div><dt>公司含义</dt><dd><span class="tag a">P-A</span>在经销模式下，这些义务主要落在도우정보（进口商）。品牌方的风险在于：如果 KC 由经销商持有，更换经销商时需要重新认证，渠道议价权受制于人；平行进口商品若未经 KC 或售后不清，投诉可能记到品牌头上。关税方面，依据 WTO《信息技术协定》，韩国对 HS 8523.51 通常适用零关税，但需以韩国关税厅 UNIPASS 税率表复核 <span class="tag q">Q</span>。</dd></div>
+            <div><dt>方向 / 程度 / 置信度</dt><dd>+1 / 低 / 中。</dd></div>
+            <div><dt>成立条件</dt><dd>三款产品均已完成 KC 登记；도우정보已按 EPR 登记。</dd></div>
+            <div><dt>关键例外</dt><dd>若致态自建韩文官网直营或在平台开旗舰店直接面向韩国消费者，将触发电商法国内代理人义务（门槛以施行令为准）。</dd></div>
+            <div><dt>失效点</dt><dd>韩国出台针对境外直购电子产品的强制 KC 要求（2024 年曾提出后撤回，本次未重新核验）。</dd></div>
+            <div><dt>待确认项</dt><dd><span class="tag q">Q</span>KC 登记号与持有人；电商法修正案公布日期（决定国内代理人条款是否在 2027 年初施行）；EPR 最终门槛。</dd></div>
+            <div><dt>优先级</dt><dd>风险 P1（核查成本低、违规后果直接）。</dd></div>
+          </dl>
+        </div>
+
+        <h3 id="t-43">4.3 美国管制体系与“11月悬崖”：决定韩国主体架构的关键变量</h3>
+        <div class="topic">
+          <div class="topic-head"><span class="lbl">方向 / 程度 / 置信度</span><span class="dir mix">经销 0～−1</span><span class="dir neg">子公司 −2</span><span class="dir mix">程度 高</span><span class="dir mix">规则事实高 · 走向中</span><span class="pri">风险 P1</span><span class="urg now">即时决策</span></div>
+          <dl class="kv">
+            <div><dt>原文 / 官方口径</dt><dd><span class="tag">P-F</span>BIS：关联方规则规定“由一个或多个实体清单主体直接或间接持股至少 50% 的实体，自动适用实体清单限制”；暂停期 2025-11-10 至 2026-11-09，计划 2026-11-10 恢复 <a class="cite" href="#src-s18">S18</a>。中国商务部公告 2025 年第 61 号：用于研发、生产“14 纳米及以下逻辑芯片或者 256 层及以上存储芯片”的相关稀土物项出口申请“逐案审批”；第 70 号公告将其暂停至 2026-11-10 <a class="cite" href="#src-s19">S19</a><a class="cite" href="#src-s20">S20</a>。路透社时间线：习近平定于 2026-09-24 赴白宫与特朗普会晤，讨论延长 11 月到期的“脆弱休战” <a class="cite" href="#src-s21">S21</a>。</dd></div>
+            <div><dt>大白话</dt><dd><p class="plain">美中双方各自按下的“暂停键”都在 11 月 9 日至 10 日到期。美方到期后，长存控股 50% 以上的海外子公司会被自动当作“上了黑名单”；中方到期后，韩国存储大厂做先进 NAND 所需的部分稀土材料要逐案审批。</p></dd></div>
+            <div><dt>政策动因</dt><dd>美方是科技竞争与出口管制执行（堵“子公司绕道”）；中方是反制筹码。2025 年 10 月底中美首脑在韩国达成休战，稀土管制暂停是其中一部分 <span class="tag">P-F</span><a class="cite" href="#src-s21">S21</a>；美方关联方规则暂停与中方暂停在时间上同步（均从 2025 年 11 月起算一年） <a class="cite" href="#src-s18">S18</a><a class="cite" href="#src-s20">S20</a>，因此两者大概率会在同一轮谈判中一并处理 <span class="tag a">P-A</span>。</dd></div>
+            <div><dt>竞争解释与判别指标</dt><dd><ul>
+              <li><strong>假设一（续期）：</strong>9-24 会晤延长休战，两项暂停同步续期。依据：2026 年 5 月特朗普访华并宣布设立贸易与投资委员会 <a class="cite" href="#src-s21">S21</a>；2 月曾出现 1260H 移除文件 <a class="cite" href="#src-s13">S13</a>。</li>
+              <li><strong>假设二（恢复对抗）：</strong>休战到期未续，关联方规则恢复，中方稀土反制恢复。依据：国会两党施压 <a class="cite" href="#src-s22">S22</a>；1260H 新版保留长存 <a class="cite" href="#src-s14">S14</a>。</li>
+              <li><strong>判别指标与时点：</strong>9-24 会晤公报（最早 9 月下旬可观察）；BIS 是否在 11-09 前发布延期通知；商务部/海关总署是否发布新公告。</li>
+            </ul></dd></div>
+            <div><dt>公司含义</dt><dd><span class="tag a">P-A</span><ul>
+              <li><strong>经销模式：</strong>도우정보不是长存关联方，不受关联方规则影响；零售可继续。</li>
+              <li><strong>子公司模式：</strong>若在 11-10 后设立长存持股 ≥50% 的韩国子公司，该子公司接收任何受 EAR 管辖的物项（美国原产软件、部件和技术等）都需要许可，并适用与长存相同的审查政策，韩国本地服务商也要做合规筛查。这会让子公司很难正常运营。</li>
+              <li><strong>韩国政治环境：</strong>若中方恢复对“256 层及以上存储芯片”用途的稀土管制，直接受冲击的是三星、SK 海力士。此时致态在韩国高调扩张，容易被韩国舆论和政界解读为“一边卡韩国存储企业的原料，一边抢韩国存储企业的市场”。缓冲因素：2026 年 1 月韩中峰会后，中方表示将在关键矿产供应上继续合作，包括引入通用许可制度 <span class="tag">P-F</span><a class="cite" href="#src-s24b">S24b</a>，这降低了韩国被单独针对的概率，但并不改变 11 月到期这一时间点。</li>
+              <li><strong>合规细节：</strong>韩国 RMA 退回长存的故障品，若含美国原产成分，再出口给长存前需核算是否因美国成分超过最低含量门槛而受 EAR 管辖 <span class="tag q">Q</span>（需美国出口管制律师确认适用规则）。</li>
+            </ul></dd></div>
+            <div><dt>方向 / 程度 / 置信度</dt><dd>经销模式 0～−1；子公司路径 −2 / 高 / 规则事实高、走向中。</dd></div>
+            <div><dt>成立条件</dt><dd>长存在韩没有 ≥50% 持股实体（见 2.3 第 1 项）。</dd></div>
+            <div><dt>失效点</dt><dd>暂停期延长一年以上，或关联方规则被撤销。</dd></div>
+            <div><dt>优先级</dt><dd>风险 P1，紧迫度“即时决策”：窗口在 11-09 关闭，决策具有不可逆性。</dd></div>
+          </dl>
+        </div>
+
+        <h3 id="t-44">4.4 美国国会推动“盟友协同”与韩国的夹层位置</h3>
+        <div class="topic">
+          <div class="topic-head"><span class="lbl">方向 / 程度 / 置信度</span><span class="dir neg">−1（尾部 −2）</span><span class="dir mix">程度 中</span><span class="dir mix">置信度 中</span><span class="pri">风险 P2</span><span class="urg watch">跟踪观察</span></div>
+          <dl class="kv">
+            <div><dt>原文 / 官方口径</dt><dd><span class="tag">P-F</span>2026-07-16，众议院中共问题特设委员会主席穆勒纳尔（共和党）与众议员怀特赛兹（民主党）致信商务部长卢特尼克，提出三项要求：① 加严对长存的限制，并加快把长鑫列入实体清单；② 发布行政指引，禁止美国人从受限实体为 AI 系统和关键基础设施采购 DRAM、HBM 或存储组件；③ 与韩国、日本、欧盟合作，防止长鑫和长存利用全球短缺进入盟友供应链。信中称“对中国存储厂商的依赖对美国国家安全、经济安全和供应链安全构成不可接受的风险” <a class="cite" href="#src-s22">S22</a>。</dd></div>
+            <div><dt>大白话</dt><dd><p class="plain">美国国会两党议员希望政府把“不买长存”推广到盟友，点名了韩国。但这目前只是一封信，不是法律，也不是行政命令。</p></dd></div>
+            <div><dt>法律状态</dt><dd>政治表态 / 监管信号（言论层）。截至本报告截止日，未检索到商务部据此出台的正式措施，也未检索到韩国政府的官方回应。</dd></div>
+            <div><dt>国别政治生态（韩国）</dt><dd><ul>
+              <li><strong>对外结盟：</strong>美韩同盟以及美韩之间的关税、半导体安排使韩国对美方诉求高度敏感 <span class="tag a">P-A</span>；但韩国存储大厂对中国市场也有依赖（报道称 SK 海力士中国大陆营收占比约 19%） <a class="cite" href="#src-s36">S36</a>，韩国跟进限制中国存储的成本高。</li>
+              <li><strong>利益结构：</strong>三星、SK 目前把产能优先给企业级，对消费级 SSD 的防守动力不强；组装机商和消费者从货源增加中受益 <span class="tag a">P-A</span>。在下行周期中，这一格局可能反转。</li>
+              <li><strong>意识形态与舆情：</strong>2026 年 1 月民调显示韩国人对“中国产品”的好感度为 31.5 分（满分 100），“不信任”比例从 67% 降至 56% <a class="cite" href="#src-s25">S25</a>；分销商反映韩国消费者对“中国 NAND + 中国主控”的 SSD 仍然谨慎 <a class="cite" href="#src-s10">S10</a>。</li>
+            </ul></dd></div>
+            <div><dt>竞争解释</dt><dd><ul>
+              <li><strong>假设一：</strong>国会信函主要针对美国企业（苹果等）采购中国存储，韩国消费级零售不在视野中 <span class="tag a">P-A</span>。依据：信函要求集中于 AI 系统、关键基础设施和美国人的采购行为 <a class="cite" href="#src-s22">S22</a>。</li>
+              <li><strong>假设二：</strong>行政部门借此推动与韩日欧的“存储供应链协同”，最终形成对长存产品进入盟友整机供应链的约束。依据：信函明确点名盟友协同；FAR 规则已包含向非联邦客户披露的相关安排（适用范围待律师确认） <a class="cite" href="#src-s16">S16</a>。</li>
+              <li><strong>判别指标：</strong>商务部是否发布行政指引；美韩经贸或供应链对话的联合声明是否出现“存储”“中国芯片”表述；长鑫是否被列入实体清单（最早可观察：2026 年第四季度）。</li>
+            </ul></dd></div>
+            <div><dt>公司含义</dt><dd><span class="tag a">P-A</span>对消费级零售的直接法律影响接近于零；对 B2B/OEM 和合作伙伴（尤其是美国上市或有美国业务的韩国渠道商、华硕等联名伙伴）的去风险化影响可能显著。</dd></div>
+            <div><dt>方向 / 程度 / 置信度</dt><dd>−1（尾部 −2）/ 中 / 中（未来政治走向，置信度上限为“中”）。</dd></div>
+            <div><dt>低成本对冲</dt><dd>保持经销商模式；合同中写入“监管变化终止与库存回购”条款；不在韩国做“供应链替代三星”的宣传。</dd></div>
+            <div><dt>优先级</dt><dd>风险 P2，紧迫度“跟踪观察”，但需配套触发预案（见第 9 章）。</dd></div>
+          </dl>
+        </div>
+
+        <h3 id="t-45">4.5 韩国产业安全叙事与消费者信任</h3>
+        <div class="topic">
+          <div class="topic-head"><span class="lbl">方向 / 程度 / 置信度</span><span class="dir neg">−1</span><span class="dir mix">程度 中</span><span class="dir mix">置信度 中</span><span class="pri">风险 P1</span></div>
+          <dl class="kv">
+            <div><dt>原文 / 官方口径</dt><dd><span class="tag">P-F</span>产业通商部称《半导体特别法》是为了应对“竞争国的技术追赶和大规模补贴” <a class="cite" href="#src-s26">S26</a>；2025-12-23 首尔中央地检起诉 10 人，涉嫌把三星、SK 的 DRAM 技术泄露给长鑫，估计三星 2024 年销售损失约 5 万亿韩元 <a class="cite" href="#src-s28">S28</a>；韩媒 2026-09-01 报道长存两名核心技术人员分别出身三星和 SK 海力士（中国） <a class="cite" href="#src-s29">S29</a>；ZDNet Korea 援引美国 FAR 规则中的“后门”表述，呼吁韩国加强硬件供应链安全检查 <a class="cite" href="#src-s39">S39</a>。</dd></div>
+            <div><dt>大白话</dt><dd><p class="plain">韩国社会把中国存储企业看成“追赶者 + 挖人者 + 潜在安全风险”。卖 SSD 本身不违法，但“长存”这个名字在韩国自带争议。</p></dd></div>
+            <div><dt>公司含义</dt><dd><span class="tag a">P-A</span>① 传播上，“打到三星老家”这类国内宣传口径会被韩媒放大，引发民族情绪；② 产品上，SSD 是没有联网功能的存储设备，但“后门”说法在韩国已有传播基础，需要事先准备可验证的技术说明（固件签名、无网络功能、第三方检测）；③ 用人上，在韩开展任何招聘、研发合作都要避开三星、SK 在职或近期离职的技术人员，否则容易被卷入技术泄露执法。</dd></div>
+            <div><dt>方向 / 程度 / 置信度</dt><dd>−1 / 中 / 中。</dd></div>
+            <div><dt>失效点</dt><dd>出现安全事件或技术泄露案件牵涉长存，将升为 −2。</dd></div>
+            <div><dt>优先级</dt><dd>风险 P1（发布期是叙事形成期，准备成本低）。</dd></div>
+          </dl>
+        </div>
+
+        <h3 id="t-46">4.6 进入路径比较</h3>
+        <div class="paths">
+          <div class="path current">
+            <h4>A. 经销商 + 零售（现状）</h4>
+            <div class="row"><b>利</b>法律距离远、可逆；合规义务在进口商；投入低</div>
+            <div class="row"><b>弊</b>渠道依赖单一经销商；KC 可能由经销商持有；品牌控制力弱</div>
+            <div class="jd"><span class="dir pos">中性偏利好</span> 建议维持</div>
+          </div>
+          <div class="path">
+            <h4>B. 跨境直营（自营网店 / 平台旗舰店）</h4>
+            <div class="row"><b>利</b>价格和品牌自主</div>
+            <div class="row"><b>弊</b>可能触发电商法国内代理人义务；个人信息和售后责任直接落在品牌方；与经销商冲突</div>
+            <div class="jd"><span class="dir mix">中性</span> 暂不建议</div>
+          </div>
+          <div class="path">
+            <h4>C. 设立韩国控股子公司</h4>
+            <div class="row"><b>利</b>本地售后、营销、政府沟通能力</div>
+            <div class="row"><b>弊</b>2026-11-10 后可能自动适用实体清单限制；成为舆论焦点；EPR、KC、消费者法义务全部内化</div>
+            <div class="jd"><span class="dir neg">中性偏利空</span> 建议冻结到 11 月之后</div>
+          </div>
+          <div class="path">
+            <h4>D. B2B / OEM</h4>
+            <div class="row"><b>利</b>量大、稳定</div>
+            <div class="row"><b>弊</b>与 805、5949 条款和国会“盟友协同”诉求正面冲突；大客户去风险化</div>
+            <div class="jd"><span class="dir neg">利空</span> 针对有美国政府业务的客户；只对纯韩国内需客户保留有限空间</div>
+          </div>
+        </div>
+      </section>
+      <!-- ===== 5 ===== -->
+      <section class="sec" id="s-5">
+        <p class="sec-no">05</p>
+        <h2>对公司的影响评估</h2>
+        <div class="tbl xwide">
+          <table>
+            <thead><tr><th>事项</th><th>受影响主体</th><th>业务影响</th><th>财务影响</th><th>时间影响</th><th>基准 / 收紧 / 放宽情景</th><th>净影响</th></tr></thead>
+            <tbody>
+              <tr><td><b>A. 供给空档</b></td><td>致态品牌、도우정보</td><td>装机渠道与零售份额提升</td><td>收入正向；需计提韩国 RMA 准备金</td><td>Q4 旺季；窗口可能延续到 2027—2028 年</td><td>基准：三星/SK 消费级偏紧，价差维持；收紧：长存配额不足，有品无货；放宽：苹果等大客户认证长存，品牌背书增强</td><td><span class="dir pos">+2</span></td></tr>
+              <tr><td><b>B. 准入合规</b></td><td>도우정보（进口商）；品牌方（直营时）</td><td>常规合规，无专门壁垒</td><td>KC 与 EPR 成本低</td><td>电商法国内代理人条款预计 2027 年初施行 <span class="tag q">Q</span></td><td>基准：常规合规；收紧：境外直购强制 KC；放宽：无</td><td><span class="dir pos">+1</span></td></tr>
+              <tr><td><b>C. 11月悬崖</b></td><td>拟设韩国子公司；韩国合作方</td><td>子公司路径基本不可行；合作方尽调加码</td><td>子公司前期投入可能沉没</td><td class="nw">2026-11-09 / 11-10</td><td>基准：休战续期，维持现状；收紧：规则恢复 + 中方稀土反制恢复，韩国舆论转冷；放宽：规则撤销</td><td><span class="dir mix">经销 0～−1</span><br><span class="dir neg">子公司 −2</span></td></tr>
+              <tr><td><b>D. 美国采购禁令</b></td><td>韩国 OEM / 集成商客户</td><td>有美国政府业务的客户不可用</td><td>B2B 收入上限受压</td><td>2027-06-30（国防部产品禁令）；2027-12-23（联邦）</td><td>基准：零售不受影响；收紧：扩大到关键基础设施；放宽：无迹象</td><td><span class="dir neg">B2B −1</span></td></tr>
+              <tr><td><b>E. 盟友协同</b></td><td>渠道商、联名伙伴</td><td>渠道下架或观望风险</td><td>潜在渠道收缩</td><td>最早 2026 年第四季度</td><td>基准：停留在国会表态；收紧：商务部出指引 + 美韩声明；放宽：行政部门搁置</td><td><span class="dir neg">−1（尾部 −2）</span></td></tr>
+              <tr><td><b>F. 叙事与信任</b></td><td>致态品牌</td><td>品牌溢价受限</td><td>营销与第三方检测投入</td><td>发布后 3—6 个月是叙事形成期</td><td>基准：温和负面；收紧：安全或泄密事件；放宽：售后口碑形成</td><td><span class="dir neg">−1</span></td></tr>
+              <tr><td><b>G. 贸易救济</b></td><td>致态、도우정보</td><td>低价冲量时有被申请反倾销的可能</td><td>潜在反倾销税</td><td>周期下行时，2027 年后概率上升</td><td>基准：无申请；收紧：三星/SK 或产业协会申请；放宽：无</td><td><span class="dir neg">−1 潜在</span></td></tr>
+              <tr><td><b>H. 韩中关系回暖</b></td><td>整体</td><td>政治环境不设限</td><td>—</td><td>持续</td><td>基准：回暖；收紧：“11月悬崖”冲击；放宽：FTA 第二阶段推进</td><td><span class="dir pos">+1</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <h4>总体方向的推导</h4>
+        <ol>
+          <li><strong>主导业务和地域：</strong>当前真实暴露只有“韩国消费级零售（经销模式）”。在这一业务上，A（+2）和 B（+1）是高或中置信度的现实利好；C、D、E 的负面主要作用在尚未发生的子公司、B2B 路径上。</li>
+          <li><strong>暴露权重：</strong>韩国收入占比低，因此总体“影响程度”只评为“中”，主要体现为品牌和地缘关注度。</li>
+          <li><strong>不按事项数量投票：</strong>负面事项数量更多，但多为或有风险，且可以通过维持经销模式、客户筛选来规避。因此净判断为<strong>中性偏利好</strong>，而不是“利好”。之所以不给“利好”，是因为尾部风险（C、E）不可控，一旦触发会同时影响渠道、声誉和合作伙伴。</li>
+        </ol>
+      </section>
+
+      <!-- ===== 6 ===== -->
+      <section class="sec" id="s-6">
+        <p class="sec-no">06</p>
+        <h2>合规风险</h2>
+
+        <h3 class="plevel">P0 <small>0—7 天</small></h3>
+        <div class="none">未发现达到 P0 标准的事项。检索边界：未发现致态在韩的处罚、监管问询或已生效但未履行的义务。但 KC 登记状态尚未核实；若核查发现在售型号未完成 KC，应立即升为 P0（停止相应型号销售并补办）。</div>
+
+        <h3 class="plevel">P1 <small>30 天内</small></h3>
+        <div class="plist">
+          <div class="pitem">
+            <div class="ph"><span class="pid">R1</span><span class="pt">“11月悬崖”下的主体架构</span><a class="cite" href="#t-43">4.3</a></div>
+            <p>2026-11-10 前不设立长存持股 ≥50% 的韩国实体；由美国出口管制律师评估：① 向도우정보供货的出口主体是否属于长存 ≥50% 关联方；② 关联方规则恢复后对致态供应链和韩国合作方的影响；③ 韩国 RMA 回流的 EAR 最低含量问题。</p>
+            <p class="why"><strong>为何现在做：</strong>决策窗口在 11-09 关闭，子公司一旦设立难以撤回。</p>
+          </div>
+          <div class="pitem">
+            <div class="ph"><span class="pid">R2</span><span class="pt">韩国合规底线核查</span><a class="cite" href="#t-42">4.2</a></div>
+            <p>核实三款产品（含各容量版本）的 KC 登记号及持有人、韩文标签与原产地标识、도우정보的 EPR 登记、质保条款与消费者争议处理流程；对平行进口（Coupang“海外购买”）明确质保政策。</p>
+          </div>
+          <div class="pitem">
+            <div class="ph"><span class="pid">R3</span><span class="pt">韩文传播口径与安全说明</span><a class="cite" href="#t-45">4.5</a></div>
+            <p>停止在韩语境使用“打到三星/SK 老家”“挑战韩系”一类表述；准备韩文 Q&amp;A（产品无联网功能、固件签名机制、质保与数据处理说明）；评估委托韩国第三方机构做固件与数据安全检测。</p>
+          </div>
+        </div>
+
+        <h3 class="plevel">P2 <small>1—3 个月</small></h3>
+        <div class="plist">
+          <div class="pitem">
+            <div class="ph"><span class="pid">R4</span><span class="pt">B2B/OEM 客户准入规则</span><a class="cite" href="#t-46">4.6</a><a class="cite" href="#s-3">3.2</a></div>
+            <p>建立韩国 B2B 客户筛选表，识别客户的美国联邦、国防和关键基础设施业务暴露；有暴露的客户暂缓；合同中写入“终端用途声明”和“美国法规变化时的终止与库存处理”条款。</p>
+          </div>
+          <div class="pitem">
+            <div class="ph"><span class="pid">R5</span><span class="pt">经销协议加固</span><a class="cite" href="#t-42">4.2</a><a class="cite" href="#t-44">4.4</a></div>
+            <p>确认 KC 证书归属或约定转移协助义务；明确 EPR、消费者法义务由进口商承担并提供赔偿承诺；加入“监管变化”终止条款；约定致态对韩国价格和宣传口径的审核权。</p>
+          </div>
+          <div class="pitem">
+            <div class="ph"><span class="pid">R6</span><span class="pt">电商直营评估</span></div>
+            <p>若计划开设韩文直营店或平台旗舰店，先评估电商法国内代理人义务（施行令门槛、公布日期待确认）。</p>
+          </div>
+        </div>
+
+        <h3 class="plevel">P3 <small>持续观察，附触发器</small></h3>
+        <div class="plist">
+          <div class="pitem">
+            <div class="ph"><span class="pid">R7</span><span class="pt">韩国贸易救济</span><span class="pri">复查 2026-12-31</span></div>
+            <p><strong>触发器：</strong>NAND 合约价连续两个季度下跌，且致态在 Danawa SSD 品类的销量排名进入前五，或韩国贸易委员会受理任何 NAND/SSD 相关申请。</p>
+            <p><strong>触发后：</strong>启动价格合规审查（出口价 vs 国内价），准备应诉材料。</p>
+          </div>
+          <div class="pitem">
+            <div class="ph"><span class="pid">R8</span><span class="pt">专利诉讼风险</span><span class="pri">复查 2027-03-21</span></div>
+            <p>三星、SK 在韩国拥有大量 NAND/SSD 专利；另有报道称三星已获得长存混合键合专利许可（未经公司证实） <a class="cite" href="#src-s37">S37</a>，这意味着双方存在交叉依赖，诉讼动力可能有限。</p>
+            <p><strong>触发器：</strong>三星/SK 或其他厂商在韩国对长存或经销商提起诉讼、向贸易委员会申请不公平贸易行为调查。</p>
+          </div>
+          <div class="pitem">
+            <div class="ph"><span class="pid">R9</span><span class="pt">盟友协同落地</span><a class="cite" href="#t-44">4.4</a><span class="pri">复查 2026-12-15</span></div>
+            <p><strong>触发器：</strong>见第 9 章。</p>
+            <p><strong>触发后执行预案：</strong>暂停新增 B2B 接触、与经销商启动库存与合同审查、准备韩国国会与媒体沟通材料。</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== 7 ===== -->
+      <section class="sec" id="s-7">
+        <p class="sec-no">07</p>
+        <h2>政策机会</h2>
+
+        <h3 class="plevel">P0</h3>
+        <div class="none">未发现达到 P0 标准的机会。供给空档是真实的，但不是 7 天内关闭的窗口。</div>
+
+        <h3 class="plevel">P1</h3>
+        <div class="plist">
+          <div class="pitem">
+            <div class="ph"><span class="pid">O1</span><span class="pt">第四季度装机渠道供货与“保换新”售后</span><a class="cite" href="#t-41">4.1</a></div>
+            <p>10 月中旬前确定对韩配额；以“5 年质保 + 缺货时同级或升级换新”为核心卖点，与三星/SK 的“按市价退款”形成对比；为此在韩预留 RMA 库存。</p>
+            <p><strong>验收：</strong>配额与售后政策书面确认，经销商落实售后网点。</p>
+          </div>
+          <div class="pitem">
+            <div class="ph"><span class="pid">O2</span><span class="pt">IPO 叙事一致性</span></div>
+            <p>长存控股 IPO 已获受理，报道援引招股书，提及国际贸易不稳定可能影响海外拓展 <a class="cite" href="#src-s35">S35</a>（未取得招股书原文）。韩国业务的对外表述需与招股书风险提示一致，避免对海外扩张作过度承诺。</p>
+          </div>
+        </div>
+
+        <h3 class="plevel">P2</h3>
+        <div class="plist">
+          <div class="pitem">
+            <div class="ph"><span class="pid">O3</span><span class="pt">借华硕联名提升信任</span></div>
+            <p>致态与华硕的联名产品 <a class="cite" href="#src-s1">S1</a> 可作为韩国市场的第三方信任背书；需先评估华硕自身对美国合规的立场，避免联名伙伴在压力下中途退出。</p>
+          </div>
+          <div class="pitem">
+            <div class="ph"><span class="pid">O4</span><span class="pt">利用韩中 MOU 保护品牌</span></div>
+            <p>2026 年 1 月韩中签署的 MOU 包含知识产权保护与边境知识产权执法 <a class="cite" href="#src-s24">S24</a>，可用于打击仿冒致态产品和不合规平行进口。</p>
+          </div>
+        </div>
+
+        <h3 class="plevel">P3</h3>
+        <div class="plist">
+          <div class="pitem">
+            <div class="ph"><span class="pid">O5</span><span class="pt">条件性 B2B</span><span class="pri">复查 2027-01-31</span></div>
+            <p>若 9-24 会晤续期休战、商务部在 2027 年第一季度前未就国会信函采取行动，可评估面向“无美国政府业务”的韩国内需客户（中小集成商、教育或内容创作行业）的 B2B 试点。</p>
+            <p><strong>触发器：</strong>休战续期公报 + 关联方规则暂停延期通知。</p>
+          </div>
+          <div class="pitem">
+            <div class="ph"><span class="pid">O6</span><span class="pt">韩中 FTA 第二阶段</span><span class="pri">复查 2027-03-21</span></div>
+            <p>两国领导人同意推动 FTA 服务与投资谈判“年内取得有意义的进展” <a class="cite" href="#src-s24b">S24b</a>。它对货物贸易（SSD 大概率已是零关税）增量有限，只在售后服务和投资准入层面相关。</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== 8 ===== -->
+      <section class="sec" id="s-8">
+        <p class="sec-no">08</p>
+        <h2>行动计划</h2>
+        <div class="tbl xwide">
+          <table>
+            <thead><tr><th>#</th><th>动作</th><th>责任角色</th><th>时限</th><th>依赖</th><th>验收标准</th><th>对应事项</th></tr></thead>
+            <tbody>
+              <tr><td class="num">1</td><td>冻结韩国控股子公司设立决策；编制 9-24 会晤后的两套情景预案（续期 / 不续期）</td><td>管理层；公共事务</td><td>2026-09-30 出预案；冻结至少到 2026-11-10</td><td>9-24 会晤公报</td><td>管理层会议纪要；两套预案文本</td><td class="nw">R1、C</td></tr>
+              <tr><td class="num">2</td><td>委托美国出口管制律师出具关联方规则影响意见（出口主体持股、供应链、RMA 最低含量）</td><td>法务</td><td class="nw">2026-10-31</td><td>2.3 第 1 项内部数据</td><td>书面法律意见</td><td class="nw">R1</td></tr>
+              <tr><td class="num">3</td><td>与도우정보核对 KC 登记号及持有人、EPR 登记、标签与原产地标识、质保条款</td><td>法务；区域业务</td><td class="nw">2026-10-05</td><td>经销商配合</td><td>型号 × 容量的合规清单，全部“已登记”；否则启动 P0</td><td class="nw">R2</td></tr>
+              <tr><td class="num">4</td><td>确定 2026 年第四季度至 2027 年第一季度对韩配额、价格下限和 RMA 库存</td><td>业务；财务</td><td class="nw">2026-10-15</td><td>产能与国内订单排期</td><td>配额表；价格政策；RMA 准备金测算</td><td class="nw">O1、A、R7</td></tr>
+              <tr><td class="num">5</td><td>发布韩文传播口径手册；准备安全 Q&amp;A；评估第三方固件检测</td><td>公共事务；品牌；研发</td><td class="nw">2026-10-15</td><td>研发技术说明</td><td>口径手册定稿；检测机构报价</td><td class="nw">R3、F</td></tr>
+              <tr><td class="num">6</td><td>修订经销协议：KC 归属或转移协助、合规赔偿、监管变化终止、宣传审核权</td><td>法务；业务</td><td class="nw">2026-11-30</td><td>与经销商谈判</td><td>签署补充协议</td><td class="nw">R5</td></tr>
+              <tr><td class="num">7</td><td>建立韩国 B2B 客户准入筛选表与合同模板</td><td>法务；风控；业务</td><td class="nw">2026-12-31</td><td>律师意见（第 2 项）</td><td>筛选表与合同模板获批</td><td class="nw">R4、D</td></tr>
+              <tr><td class="num">8</td><td>建立监测看板（中美会晤、BIS/商务部公告、美韩声明、韩国贸易委员会、Danawa 价格与排名）</td><td>公共事务；市场研究</td><td>2026-10-10 上线，每两周更新</td><td>—</td><td>看板上线；首份双周报</td><td class="nw">第 9 章</td></tr>
+              <tr><td class="num">9</td><td>核对韩国业务对外表述与 IPO 招股书风险提示是否一致</td><td>董秘办；法务</td><td class="nw">2026-10-31</td><td>招股书文本</td><td>一致性核对记录</td><td class="nw">O2</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+      <!-- ===== 9 ===== -->
+      <section class="sec" id="s-9">
+        <p class="sec-no">09</p>
+        <h2>未来重要关注点</h2>
+        <div class="tbl xwide">
+          <table>
+            <thead><tr><th>关注点</th><th>触发信号</th><th>最早可观察时间</th><th>下一复查日</th><th>触发后如何改变当前判断</th></tr></thead>
+            <tbody>
+              <tr><td><b>中美首脑会晤</b></td><td>休战是否延长；是否提及芯片、出口管制</td><td>2026-09-24 后数日</td><td class="nw num">2026-09-28</td><td>续期：维持“中性偏利好”，子公司决策可在 2027 年重议；破裂：C 对经销模式取 −1，总体降为“中性偏利空”，暂停在韩新增投入</td></tr>
+              <tr><td><b>美国关联方规则</b></td><td>BIS 发布延期或恢复通知</td><td>2026-10 至 2026-11-09</td><td class="nw num">2026-11-10</td><td>恢复：子公司路径锁定为不可行；审查所有长存 ≥50% 关联实体对韩业务</td></tr>
+              <tr><td><b>中国商务部第 61 号公告暂停到期</b></td><td>商务部/海关总署新公告</td><td>2026-11-10 前后</td><td class="nw num">2026-11-10</td><td>恢复：韩国舆论可能转冷，F 升为 −2，收缩在韩宣传</td></tr>
+              <tr><td><b>国会信函落地</b></td><td>商务部行政指引；长鑫列入实体清单；美韩联合声明出现存储或中国芯片表述</td><td>2026 年第四季度</td><td class="nw num">2026-12-15</td><td>落地并点名盟友：E 升为 −2，总体降为“中性偏利空”，暂停新增渠道和 B2B</td></tr>
+              <tr><td><b>韩国政府立场</b></td><td>产业通商部或外交部就中国存储作出表态；公共部门采购指引</td><td>不定</td><td class="nw num">2026-12-15</td><td>出现限制性表态：重估 B、E</td></tr>
+              <tr><td><b>韩国贸易救济</b></td><td>贸易委员会受理 NAND/SSD 相关申请</td><td>周期下行后</td><td class="nw num">2026-12-31</td><td>受理：G 升为 −2，启动应诉与价格调整</td></tr>
+              <tr><td><b>NAND 周期</b></td><td>合约价拐点；三星/SK 恢复消费级供货</td><td>不确定；有行业报道预计存储高价可能持续到 2028 年 <a class="cite" href="#src-s23">S23</a></td><td>每季度（首次 2026-12-31）</td><td>转跌：A 从 +2 降至 +1，窗口收窄，同时 G 风险上升</td></tr>
+              <tr><td><b>美国采购禁令实施</b></td><td>5949 条款 FAR 最终规则公布</td><td>2026 年第四季度至 2027 年</td><td class="nw num">2027-03-21</td><td>最终规则扩大披露义务：重估 B2B 与韩国 OEM 合作</td></tr>
+              <tr><td><b>电商法施行令</b></td><td>国内代理人门槛与施行日公布</td><td>2026 年第四季度</td><td class="nw num">2026-12-31</td><td>若计划直营，据门槛决定是否指定代理人</td></tr>
+              <tr><td><b>长存 IPO 审核问询</b></td><td>上交所问询涉及海外业务与制裁风险</td><td>2026 年第四季度起</td><td class="nw num">2026-12-31</td><td>若监管要求更审慎披露，同步收敛韩国扩张表述</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- ===== 10 ===== -->
+      <section class="sec" id="s-10">
+        <p class="sec-no">10</p>
+        <h2>核心结论的条件、例外与失效点</h2>
+        <div class="tbl wide">
+          <table>
+            <thead><tr><th>核心结论</th><th>成立条件</th><th>关键例外</th><th>失效点</th><th>待确认信息</th></tr></thead>
+            <tbody>
+              <tr><td><b>总体“中性偏利好”</b></td><td>维持经销模式；中美不在 11 月全面恢复对抗；美方未落地盟友协同</td><td>若改走子公司或 B2B，降为“中性偏利空”</td><td>国会诉求变成行政指引并点名韩国；“11月悬崖”触发</td><td>在韩销售法律结构；配额</td></tr>
+              <tr><td><b>供给空档是最大的“利”</b></td><td>长存稳定供货；三星/SK 消费级偏紧</td><td>中国其他品牌（华为等）分流</td><td>NAND 转跌，三星/SK 降价</td><td>对韩配额与价格政策</td></tr>
+              <tr><td><b>韩国准入无专门壁垒</b></td><td>完成 KC、EPR、标签等常规义务</td><td>跨境直营触发电商法义务</td><td>韩国出台针对中国存储的专门措施</td><td>KC 登记号与持有人</td></tr>
+              <tr><td><b>子公司应冻结到 11 月之后</b></td><td>关联方规则按期恢复的可能性不可排除</td><td>若 9-24 会晤明确延长暂停，可提前重议</td><td>规则被撤销或长期暂停</td><td>出口主体持股结构</td></tr>
+              <tr><td><b>B2B/OEM 应暂缓</b></td><td>805、5949 条款按法定日期生效；国会压力持续</td><td>纯韩国内需客户可有限试点</td><td>美方政策明显转向交易型并放宽</td><td>现有 B2B 接触情况</td></tr>
+              <tr><td><b>叙事风险可管理</b></td><td>传播口径克制、售后兑现</td><td>出现安全或泄密事件</td><td>韩国政界公开点名长存</td><td>第三方检测可行性</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <h3>需当地专业机构确认的事项</h3>
+        <ul>
+          <li><strong>美国出口管制律师：</strong>向도우정보供货主体是否属于长存 ≥50% 关联方；关联方规则恢复后的影响；RMA 回流的最低含量核算；FAR 5949 拟议规则中“向非联邦客户披露”条款对长存海外销售的适用性。</li>
+          <li><strong>韩国律师 / 认证机构：</strong>SSD 在电波法下的具体认证类别；KC 证书转移规则；EPR 最终门槛与义务人；电商法国内代理人施行令门槛；平行进口质保责任分担。</li>
+          <li><strong>韩国税务 / 关务：</strong>HS 8523.51 适用税率（UNIPASS 复核）；韩中 FTA 原产地证明是否有必要。</li>
+        </ul>
+      </section>
+
+      <!-- ===== 11 ===== -->
+      <section class="sec" id="s-11">
+        <p class="sec-no">11</p>
+        <h2>来源与证据台账</h2>
+        <p class="small muted">访问日期均为 2026-09-21；来源属性均为 P（公开资料）。台账只收录本次实际打开核验过的页面；标注“部分可见”的来源仅核验了可公开访问部分。未收录任何平台自媒体链接。</p>
+        <div class="tbl xwide">
+          <table>
+            <thead><tr><th>编号</th><th>等级</th><th>发布机构</th><th>标题 / 文号</th><th>发布 / 生效日期</th><th>状态</th><th>支撑内容与限制</th><th>链接</th></tr></thead>
+            <tbody>
+              <tr id="src-s1"><td class="num">S1</td><td>L2 公司官方新闻稿</td><td>致态 / PR Newswire APAC</td><td>ZHITAI at COMPUTEX: Targeting Gamers and High-Performance Creators with Flagship SSD Launches Across the APAC Region</td><td class="nw">2026-06-02</td><td>公司公告</td><td>三款新品、拓展韩国/新加坡、华硕联名、5 年质保；未披露价格</td><td><a href="https://www.prnewswire.com/apac/news-releases/zhitai-at-computex-targeting-gamers-and-high-performance-creators-with-flagship-ssd-launches-across-the-apac-region-302787639.html" target="_blank" rel="noopener">打开</a></td></tr>
+              <tr id="src-s2"><td class="num">S2</td><td>L3 合作方新闻稿</td><td>도우정보 / 뉴스와이어</td><td>도우정보, YMTC 소비자용 SSD 브랜드 'ZHITAI' 국내 공식 출시</td><td class="nw">2026-06-11</td><td>公司公告</td><td>经销商身份、渠道、年内追加产品；未披露价格、KC、售后</td><td><a href="https://www.newswire.co.kr/newsRead.php?no=1036270" target="_blank" rel="noopener">打开</a></td></tr>
+              <tr id="src-s3"><td class="num">S3</td><td>L3</td><td>ZDNet Korea（经 Daum 转载）</td><td>中 YMTC, 소비자용 SSD로 삼성전자·SK하이닉스 안방 노크</td><td class="nw">2026-06-11</td><td>媒体报道</td><td>经销商称长存涨价幅度较低；三星/SK 转向 HBM；美光退出；以组装机商为渠道</td><td><a href="https://v.daum.net/v/20260611164648820" target="_blank" rel="noopener">打开</a></td></tr>
+              <tr id="src-s4"><td class="num">S4</td><td>L4</td><td>Danawa</td><td>YMTC ZHITAI SC001 (1TB) 商品页</td><td class="nw">登录于 2021-02</td><td>商业数据</td><td>证明 2021 年曾在韩上架；退出原因未知</td><td><a href="https://prod.danawa.com/info/?pcode=13360241" target="_blank" rel="noopener">打开</a></td></tr>
+              <tr id="src-s5"><td class="num">S5</td><td>L4</td><td>Danawa</td><td>ZHITAI、삼성전자 9100 PRO、삼성전자 990 PRO 搜索结果；TiPlus7100s 해외구매 商品页</td><td class="nw">访问日时点价格</td><td>商业数据</td><td>价差计算、平行进口价格；价格每日波动，非同级严格对比</td><td class="nw"><a href="https://search.danawa.com/dsearch.php?query=ZHITAI" target="_blank" rel="noopener">ZHITAI</a> · <a href="https://search.danawa.com/dsearch.php?query=%EC%82%BC%EC%84%B1%EC%A0%84%EC%9E%90+9100+PRO" target="_blank" rel="noopener">9100 PRO</a> · <a href="https://search.danawa.com/dsearch.php?query=%EC%82%BC%EC%84%B1%EC%A0%84%EC%9E%90+990+PRO" target="_blank" rel="noopener">990 PRO</a> · <a href="https://prod.danawa.com/info/?pcode=109483196" target="_blank" rel="noopener">海外购买</a></td></tr>
+              <tr id="src-s6"><td class="num">S6</td><td>L3</td><td>디일렉（THE ELEC）</td><td>삼성전자 소비자용 메모리 가격, 두 달 새 3배…"더 오를 것"</td><td class="nw">2026-01-23</td><td>媒体报道</td><td>三星消费级涨价与供货不足</td><td><a href="https://www.thelec.kr/news/articleView.html?idxno=51285" target="_blank" rel="noopener">打开</a></td></tr>
+              <tr id="src-s7"><td class="num">S7</td><td>L4</td><td>Danawa DPG</td><td>SSD 역대 최저가 대비 현재 가격? 한국은 2~3배, 미국은 3~5배 올랐다</td><td class="nw">2026-02-27</td><td>商业分析</td><td>韩国 SSD 价格涨幅</td><td><a href="https://dpg.danawa.com/news/view?boardSeq=294&amp;listSeq=5976680" target="_blank" rel="noopener">打开</a></td></tr>
+              <tr id="src-s8"><td class="num">S8</td><td>L1 美光官方</td><td>Micron Technology</td><td>Micron Announces Exit from Crucial Consumer Business</td><td class="nw">2025-12-03</td><td>公司公告</td><td>退出 Crucial 消费业务，供货至 2026 年 2 月</td><td><a href="https://investors.micron.com/news-releases/news-release-details/micron-announces-exit-crucial-consumer-business" target="_blank" rel="noopener">打开</a></td></tr>
+              <tr id="src-s9"><td class="num">S9</td><td>L3</td><td>아시아경제</td><td>"고장나면 끝장" 삼전닉스 소비자들 난리…뛰는 SSD값에 "새 제품 없어 가격만 환불"</td><td class="nw">2026-08-16</td><td>媒体报道</td><td>三星/SK 按市价退款的售后争议</td><td><a href="https://view.asiae.co.kr/article/2026081616561464696" target="_blank" rel="noopener">打开</a></td></tr>
+              <tr id="src-s10"><td class="num">S10</td><td>L4</td><td>글로벌이코노믹</td><td>[실리콘 디코드] YMTC·화웨이, 마이크론 빈자리 노린다</td><td class="nw">2025-12-14</td><td>媒体报道</td><td>华为入韩、美光约 6% 份额、分销商称消费者谨慎；单一二手来源，份额数据未经核实</td><td><a href="https://www.g-enews.com/article/Global-Biz/2025/12/202512131156353704fbbec65dfb_1" target="_blank" rel="noopener">打开</a></td></tr>
+              <tr id="src-s11"><td class="num">S11</td><td>L1</td><td>美国商务部 BIS / Federal Register</td><td>Additions and Revisions to the Entity List and Conforming Removal From the Unverified List，87 FR 77505，Doc. 2022-27151</td><td>发布 2022-12-19；生效 2022-12-16</td><td>已生效</td><td>长存列入实体清单、许可要求、推定拒绝、列入理由</td><td><a href="https://www.federalregister.gov/documents/2022/12/19/2022-27151/additions-and-revisions-to-the-entity-list-and-conforming-removal-from-the-unverified-list" target="_blank" rel="noopener">打开</a></td></tr>
+              <tr id="src-s12"><td class="num">S12</td><td>L1</td><td>美国国防部 / Federal Register</td><td>Notice of Availability of Designation of Chinese Military Companies，Doc. 2025-00070</td><td class="nw">2025-01-07</td><td>已生效</td><td>长存、长鑫列入 1260H 清单</td><td><a href="https://www.federalregister.gov/documents/2025/01/07/2025-00070/notice-of-availability-of-designation-of-chinese-military-companies" target="_blank" rel="noopener">打开</a></td></tr>
+              <tr id="src-s13"><td class="num">S13</td><td>L4</td><td>Wccftech</td><td>CXMT &amp; YMTC Removed From Pentagon's 'Restricted Companies' List…</td><td>2026-02-13（含后续更新）</td><td>已撤回文件</td><td>2 月移除文件及撤回；仅作政策波动的佐证，未取得原始撤回文件</td><td><a href="https://wccftech.com/cxmt-ymtc-removed-from-pentagon-list-opening-door-for-chinese-dram-adoption/" target="_blank" rel="noopener">打开</a></td></tr>
+              <tr id="src-s14"><td class="num">S14</td><td>L1</td><td>美国国防部 / Federal Register</td><td>Notice of Availability of Designation of Chinese Military Companies，91 FR 35189，Doc. 2026-11571</td><td class="nw">2026-06-10</td><td>已生效</td><td>新版 1260H 仍含长存；未单列长存子公司</td><td><a href="https://www.federalregister.gov/documents/2026/06/10/2026-11571/notice-of-availability-of-designation-of-chinese-military-companies" target="_blank" rel="noopener">打开</a></td></tr>
+              <tr id="src-s15"><td class="num">S15</td><td>L3</td><td>WilmerHale</td><td>Pentagon Adds 65 New Entities to the 1260H List of Chinese Military Companies</td><td class="nw">2026-06-11</td><td>律所解读</td><td>805 条款 2026-06-30 / 2027-06-30 两个节点</td><td><a href="https://www.wilmerhale.com/en/insights/client-alerts/20260611-pentagon-adds-65-new-entities-to-the-1260h-list-of-chinese-military-companies" target="_blank" rel="noopener">打开</a></td></tr>
+              <tr id="src-s16"><td class="num">S16</td><td>L1</td><td>FAR 理事会 / Federal Register</td><td>Federal Acquisition Regulation: Prohibition on Certain Semiconductor Products and Services，91 FR 7223，Doc. 2026-03065</td><td>2026-02-17（评论截止 2026-04-20）</td><td>拟议规则</td><td>5949 条款实施、2027-12-23 生效、合理询问与报告义务；尚非最终规则</td><td><a href="https://www.federalregister.gov/documents/2026/02/17/2026-03065/federal-acquisition-regulation-prohibition-on-certain-semiconductor-products-and-services" target="_blank" rel="noopener">打开</a></td></tr>
+              <tr id="src-s17"><td class="num">S17</td><td>L3</td><td>Crowell &amp; Moring</td><td>Section 5949 Proposed Rule Puts the FAR Council's Chips on the Table</td><td class="nw">2026-02</td><td>律所解读</td><td>法条点名 SMIC、长鑫、长存及其关联方</td><td><a href="https://www.crowell.com/en/insights/client-alerts/section-5949-proposed-rule-puts-the-far-councils-chips-on-the-table" target="_blank" rel="noopener">打开</a></td></tr>
+              <tr id="src-s18"><td class="num">S18</td><td>L1</td><td>美国商务部 BIS / Federal Register</td><td>One Year Suspension of Expansion of End-User Controls for Affiliates of Certain Listed Entities，Doc. 2025-19846</td><td>发布 2025-11-12；生效 2025-11-10</td><td>暂停中（至 2026-11-09）</td><td>50% 规则内容及暂停期限</td><td><a href="https://www.federalregister.gov/documents/2025/11/12/2025-19846/one-year-suspension-of-expansion-of-end-user-controls-for-affiliates-of-certain-listed-entities" target="_blank" rel="noopener">打开</a></td></tr>
+              <tr id="src-s19"><td class="num">S19</td><td>L1</td><td>中国商务部</td><td>商务部公告2025年第61号 公布对境外相关稀土物项实施出口管制的决定</td><td class="nw">2025-10-09</td><td>已暂停</td><td>“256 层及以上存储芯片”用途逐案审批</td><td><a href="https://www.mofcom.gov.cn/zwgk/zcfb/art/2025/art_7fc9bff0fb4546ecb02f66ee77d0e5f6.html" target="_blank" rel="noopener">打开</a></td></tr>
+              <tr id="src-s20"><td class="num">S20</td><td>L1</td><td>中国商务部、海关总署</td><td>商务部、海关总署公告2025年第70号</td><td class="nw">2025-11-07</td><td>已生效（暂停至 2026-11-10）</td><td>暂停第 61 号等公告至 2026-11-10</td><td><a href="https://www.mofcom.gov.cn/zwgk/zcfb/art/2025/art_b1ec77dd3f0d4762952904df7cdaadec.html" target="_blank" rel="noopener">打开</a></td></tr>
+              <tr id="src-s21"><td class="num">S21</td><td>L3</td><td>路透社（经 WHBL 转载）</td><td>How Trump and Xi went from tariff war to trade truce</td><td class="nw">2026-09-20</td><td>媒体报道</td><td>9-24 会晤安排、休战 11 月到期、2026 年 5 月访华</td><td><a href="https://whbl.com/2026/09/20/how-trump-and-xi-went-from-tariff-war-to-trade-truce/" target="_blank" rel="noopener">打开</a></td></tr>
+              <tr id="src-s22"><td class="num">S22</td><td>L1 国会正式信函</td><td>美国众议院中共问题特设委员会</td><td>Moolenaar, Whitesides to Secretary Lutnick: Hold Firm on Chinese Memory Chips Ban</td><td class="nw">2026-07-16</td><td>政治表态 / 监管信号</td><td>三项诉求、点名韩国协同；不具法律约束力</td><td><a href="https://chinaselectcommittee.house.gov/media/letters/moolenaar-whitesides-to-secretary-lutnick-hold-firm-on-chinese-memory-chips-ban" target="_blank" rel="noopener">打开</a></td></tr>
+              <tr id="src-s23"><td class="num">S23</td><td>L3</td><td>The Register</td><td>Chinese memory ban would cut off RAMpocalypse relief</td><td class="nw">2026-07-17</td><td>媒体报道</td><td>苹果等厂商认证长存/长鑫的报道；高价或持续到 2028 年</td><td><a href="https://www.theregister.com/systems/2026/07/17/chinese-memory-ban-would-cut-off-rampocalypse-relief/5273993" target="_blank" rel="noopener">打开</a></td></tr>
+              <tr id="src-s24"><td class="num">S24</td><td>L2</td><td>韩国文化体育观光部 大韩民国政策简报</td><td>이재명 대통령, 시진핑 주석과 정상회담…"한중관계 전면 복원의 원년으로"</td><td class="nw">2026-01-05</td><td>官方发布</td><td>峰会定调、14 项 MOU（含知识产权）</td><td><a href="https://www.korea.kr/news/policyNewsView.do?newsId=148957531" target="_blank" rel="noopener">打开</a></td></tr>
+              <tr id="src-s24b"><td class="num">S24b</td><td>L2</td><td>大韩民国政策简报</td><td>한·중 정상, '매년 만남' 공감대…전략적 대화 채널 복원도</td><td class="nw">2026-01-06</td><td>官方发布</td><td>FTA 服务投资谈判；中方关键矿产通用许可合作</td><td><a href="https://www.korea.kr/news/policyNewsView.do?newsId=148957568&amp;pWise=sub&amp;pWiseSub=C1" target="_blank" rel="noopener">打开</a></td></tr>
+              <tr id="src-s25"><td class="num">S25</td><td>L3</td><td>한국리서치</td><td>[2026 대중인식조사] 중국 이미지와 한중 역량비교</td><td>调查 2026-01-09～12</td><td>民调</td><td>中国产品好感度 31.5 分；不信任比例下降</td><td><a href="https://hrcopinion.co.kr/archives/35846" target="_blank" rel="noopener">打开</a></td></tr>
+              <tr id="src-s26"><td class="num">S26</td><td>L2</td><td>韩国产业通商部</td><td>반도체 특별법 국회 본회의 통과</td><td class="nw">2026-01-29</td><td>已通过，待施行</td><td>立法背景、预计三季度施行；未提及中国</td><td><a href="https://www.motir.go.kr/kor/article/ATCL8764a1224/155119069/view" target="_blank" rel="noopener">打开</a></td></tr>
+              <tr id="src-s27"><td class="num">S27</td><td>L3</td><td>머니투데이</td><td>계속되는 중국발 저가 공세…상반기 반덤핑 조사신청 역대 최대</td><td class="nw">2026-07-21</td><td>媒体报道</td><td>反倾销申请数量、品类集中于钢铁化工</td><td><a href="https://www.mt.co.kr/economy/2026/07/21/2026072115501978433" target="_blank" rel="noopener">打开</a></td></tr>
+              <tr id="src-s28"><td class="num">S28</td><td>L3</td><td>전자신문</td><td>檢, 삼성·SK하이닉스 기술 中에 유출 혐의 10명 기소</td><td class="nw">2025-12-23</td><td>司法程序（起诉，未判决）</td><td>技术泄露执法语境；涉及长鑫而非长存</td><td><a href="https://www.etnews.com/20251223000349" target="_blank" rel="noopener">打开</a></td></tr>
+              <tr id="src-s29"><td class="num">S29</td><td>L3</td><td>아주경제</td><td>YMTC 낸드 추격 이끄는 '핵심 2인방'…삼성·SK하이닉스 출신 중국인 기술자</td><td class="nw">2026-09-01</td><td>媒体报道</td><td>韩媒对长存人才来源的关注；无违法指控</td><td><a href="https://www.ajunews.com/view/20260901144051216" target="_blank" rel="noopener">打开</a></td></tr>
+              <tr id="src-s30"><td class="num">S30</td><td>L1</td><td>韩国国立电波研究院</td><td>적합성평가 개요</td><td>未标明</td><td>现行制度说明</td><td>电波法第 58 条之 2、适合登记范围、申请主体</td><td><a href="https://www.rra.go.kr/ko/license/A_a_about.do" target="_blank" rel="noopener">打开</a></td></tr>
+              <tr id="src-s31"><td class="num">S31</td><td>L2</td><td>韩国公平交易委员会</td><td>전자상거래법 개정안 국회 본회의 통과（보도자료）</td><td class="nw">2025-12-30</td><td>已通过，待公布/施行</td><td>国内代理人义务、施行时间；门槛待施行令</td><td><a href="https://www.ftc.go.kr/www/selectBbsNttView.do?pageUnit=10&amp;pageIndex=1&amp;searchCnd=all&amp;key=12&amp;bordCd=3&amp;searchCtgry=01,02&amp;nttSn=46832" target="_blank" rel="noopener">打开</a></td></tr>
+              <tr id="src-s31b"><td class="num">S31b</td><td>L3</td><td>法律新闻（태평양 律所）</td><td>전자상거래법 개정안 통과, 무엇이 달라지나</td><td>未核实具体日期（修正案通过后发布）</td><td>律所解读</td><td>代理人不履职视同违法、罚款上限 1,000 万韩元</td><td><a href="https://www.lawtimes.co.kr/news/articleView.html?idxno=214698" target="_blank" rel="noopener">打开</a></td></tr>
+              <tr id="src-s32"><td class="num">S32</td><td>L2</td><td>韩国环境部（经政策简报）</td><td>전자제품 재활용은 늘리고 비용은 줄이고…'생산자책임재활용' 전 품목 확대 추진</td><td class="nw">2024-09-26</td><td>立法预告（最终版需复核）</td><td>EPR 全品类、2026-01-01、进口商 3 亿韩元门槛；未能打开 2025 年国务会议决议原文</td><td><a href="https://www.korea.kr/news/policyNewsView.do?newsId=156652245" target="_blank" rel="noopener">打开</a></td></tr>
+              <tr id="src-s33"><td class="num">S33</td><td>L4</td><td>서석관세법인</td><td>SSD(솔리드 스테이트)의 품목분류</td><td>引用 2017 年关税行政咨询案例集</td><td>实务资料</td><td>HS 8523.51 归类；未载税率</td><td><a href="https://seoseokcustoms.com/case-study/?mod=document&amp;uid=236" target="_blank" rel="noopener">打开</a></td></tr>
+              <tr id="src-s34"><td class="num">S34</td><td>L2</td><td>韩国法制处 生活法令信息</td><td>해외직구의 과세와 면세</td><td>未标明</td><td>现行制度说明</td><td>150 美元免税、超额全价征税</td><td><a href="https://easylaw.go.kr/CSP/CnpClsMain.laf?popMenu=ov&amp;csmSeq=1504&amp;ccfNo=3&amp;cciNo=1&amp;cnpClsNo=2" target="_blank" rel="noopener">打开</a></td></tr>
+              <tr id="src-s35"><td class="num">S35</td><td>L3</td><td>Investing.com（经 Yahoo Finance 转载）</td><td>China chipmaker YMTC files for $4.9 billion IPO</td><td class="nw">2026-08-21</td><td>媒体报道</td><td>IPO 受理、募资额、一季度业绩、全球第三；未取得上交所招股书原文</td><td><a href="https://ca.finance.yahoo.com/news/china-chipmaker-ymtc-files-4-161216136.html" target="_blank" rel="noopener">打开</a></td></tr>
+              <tr id="src-s36"><td class="num">S36</td><td>L4</td><td>조세일보</td><td>CXMT 다음은 YMTC…중국 메모리, 한 달 만에 두 번째 상장</td><td class="nw">2026-08-27</td><td>媒体报道</td><td>SK 海力士中国大陆营收占比约 19%；单一来源</td><td><a href="https://www.joseilbo.com/news/htmls/2026/08/20260827574613.html" target="_blank" rel="noopener">打开</a></td></tr>
+              <tr id="src-s37"><td class="num">S37</td><td>L3 部分可见</td><td>DIGITIMES</td><td>Samsung signs licensing agreement with YMTC for Hybrid Bonding tech</td><td class="nw">2025-02-26</td><td>媒体报道（公司未证实）</td><td>三星获长存混合键合专利许可的报道；付费墙，仅导语可见</td><td><a href="https://www.digitimes.com/news/a20250225PD225/samsung-yangtze-memory-licensing-technology-nand.html" target="_blank" rel="noopener">打开</a></td></tr>
+              <tr id="src-s38"><td class="num">S38</td><td>L3</td><td>IT之家</td><td>长江存储国产致态硬盘官宣出海：打到三星、SK 海力士老家韩国…</td><td class="nw">2026-06-02</td><td>媒体报道</td><td>中文媒体传播框架；亚太市场表述</td><td><a href="https://www.ithome.com/0/958/707.htm" target="_blank" rel="noopener">打开</a></td></tr>
+              <tr id="src-s39"><td class="num">S39</td><td>L3</td><td>ZDNet Korea</td><td>미국, 중국 반도체 '국가 안보 위협' 규정…"국내도 대비해야"</td><td class="nw">2026-03</td><td>媒体报道</td><td>转述 FAR 规则“后门”表述及韩国专家建议</td><td><a href="https://zdnet.co.kr/view/?no=20260309175942" target="_blank" rel="noopener">打开</a></td></tr>
+              <tr id="src-s40"><td class="num">S40</td><td>L3 部分可见</td><td>DIGITIMES 中文网</td><td>长江存储致态锁定SSD空窗期 睽违4年卷土重返韩国市场</td><td class="nw">2026-06</td><td>媒体报道</td><td>仅标题可见，用于“时隔四年”表述</td><td><a href="https://gb-www.digitimes.com.tw/tech/dt/n/shwnws.asp?id=0000757863_UFQ72YMR7E0DZG2QUZJPI" target="_blank" rel="noopener">打开</a></td></tr>
+              <tr id="src-s41"><td class="num">S41</td><td>L4</td><td>中关村在线</td><td>致态携TiPro9000等新品重返韩国，挑战韩系SSD主导格局</td><td class="nw">2026-06</td><td>媒体报道</td><td>仅用于来源冲突说明（13%、第四）</td><td><a href="https://ai.zol.com.cn/1195/11956155.html" target="_blank" rel="noopener">打开</a></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="callout small">
+          <strong>来源冲突说明：</strong>长存全球 NAND 排名，招股书口径（经 <a class="cite" href="#src-s35">S35</a> 转述）为 2026 年一季度按销售额和出货量“全球第三”；中关村在线（<a class="cite" href="#src-s41">S41</a>）称一季度份额 13%、全球第四；조세일보（<a class="cite" href="#src-s36">S36</a>）称二季度份额 14%、全球第三。本报告采用招股书口径，差异可能来自统计机构和口径（销售额/出货量）不同。
+        </div>
+      </section>
+
+      <footer class="foot">
+        <p>报告截止日 2026-09-21 · 本页由政策情报分析报告转换而成，内容与 Markdown 版一致。</p>
+        <p>本报告用于政策与经营决策参考，不替代韩国、美国执业律师或税务师的正式意见。涉及出口管制、认证、交易结构和税务的事项，请以第 10 章所列专业机构意见为准。</p>
+      </footer>
+<script>
+(function(){
+  var tip=document.createElement('div');tip.className='tip';tip.hidden=true;tip.setAttribute('role','tooltip');document.body.appendChild(tip);
+  function show(el,x,y){
+    var parts=(el.getAttribute('data-tip')||'').split('|');
+    tip.innerHTML='';
+    var b=document.createElement('b');b.textContent=parts[0]||'';tip.appendChild(b);
+    for(var i=1;i<parts.length;i++){var s=document.createElement('div');s.textContent=parts[i];tip.appendChild(s);}
+    tip.hidden=false;
+    var w=tip.offsetWidth,h=tip.offsetHeight,vw=window.innerWidth;
+    var left=Math.min(Math.max(8,x+12),vw-w-8),top=y-h-12;if(top<8)top=y+16;
+    tip.style.left=left+'px';tip.style.top=top+'px';
+  }
+  function hide(){tip.hidden=true;}
+  document.querySelectorAll('.bar[data-tip]').forEach(function(el){
+    el.addEventListener('mousemove',function(e){show(el,e.clientX,e.clientY);});
+    el.addEventListener('mouseleave',hide);
+    el.addEventListener('focus',function(){var r=el.getBoundingClientRect();show(el,r.right,r.top);});
+    el.addEventListener('blur',hide);
+  });
+  window.addEventListener('scroll',hide,{passive:true});
+})();
+</script>
+    </main>
+  </div>
+</div>
+</body>
+</html>
